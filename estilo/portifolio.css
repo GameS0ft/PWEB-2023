@@ -46,7 +46,7 @@ body
 
 .header-container:nth-child(4)
 {
-    background-image: url("../imagens/foto-isaac.png");
+    background-image: url("../imagens/isaac-foto.png");
 }
 
 
@@ -85,7 +85,7 @@ h2
 }
 a:hover
 {
-    background-color: pink;
+    background-color: white;
 }
 
 /* Menu Três Linhas*/
@@ -149,7 +149,7 @@ a:hover
     height: 4px;
     width: 10px;
     border-radius: 50%;
-    box-shadow: 0px 0px 0px 0px white;
+    box-shadow: 0px 0px 0px 0px pink;
     z-index: -1;
     transition: 400ms ease-in-out 0s;
 }
@@ -394,15 +394,14 @@ body
 
   .footer
   {
-    background-color: pink;
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    color: #1e1e2a;
-    height: 300px;
-    margin: 3rem 0 0 0 ;
+    background-color: brown;
     display: flex;
     align-items: center;
+    justify-content: left;
+    color: pink;
+    height: auto;
+    margin: 3rem 0 0 0 ;
+    display: flex;
     background-image: url("../imagens/logo.png");
     background-position: center;
     background-size:contain;
@@ -412,7 +411,7 @@ body
   }
   footer h2
   {
-    font-size: medium;
+    font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 4px;
   }
@@ -428,10 +427,18 @@ body
     text-transform: uppercase;
     letter-spacing: 4px;
   }
-.footer li ul
+.footer ul li
 {
-    display: flex;
-    justify-content: left;
-    color: #1e1e2a;
     list-style: none;
 }
+.footer a:hover
+{
+background-color: #1e1e2a;
+color: white;
+border: 5px;
+border-color: black;
+}
+.footer a
+{
+color:#1e1e2a
+}   
