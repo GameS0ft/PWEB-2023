@@ -242,7 +242,7 @@ a:hover
     display: flex;
     align-items: center;
     background-color: brown;
-    background-image: url("../imagens/pagina-inicial.png");
+    /* background-image: url("../imagens/homepage.png"); */
     background-position: center ;
     background-size: cover;
     background-repeat: no-repeat;
@@ -253,13 +253,30 @@ a:hover
 }
 .card-container:nth-child(1) .card
 {
-    /* background-image: url("../imagens/pagina-inicial.png"); */
+    background-image: url("../imagens/homepage.png");
 }
 
 .card-container:nth-child(2) .card
 {
-    background-image: url("../imagens/projeto");
+    background-image: url("../imagens/formulario.png");
 }
+
+
+.card-container:nth-child(3) .card
+{
+    background-image: url("../imagens/quiz.png");
+}
+
+.card-container:nth-child(4) .card
+{
+    background-image: url("../imagens/login.png");
+}
+
+.card-container:nth-child(5) .card
+{
+    background-image: url("../imagens/cadastro.png");
+}
+
 
 .card-text
 {
@@ -396,24 +413,15 @@ body
   {
     background-color: brown;
     display: flex;
-    align-items: center;
-    justify-content: left;
+    align-items: left;
+    justify-content: center;
     color: pink;
     height: auto;
-    margin: 3rem 0 0 0 ;
-    display: flex;
+    margin: 0 0 0 0 ;
     background-image: url("../imagens/logo.png");
     background-position: center;
     background-size:contain;
     background-repeat: no-repeat;
-
-
-  }
-  footer h2
-  {
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
   }
   footer h1
   {
@@ -421,24 +429,12 @@ body
     text-transform: uppercase;
     letter-spacing: 4px;
   }
-  footer a
-  {
-    font-size:medium;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-  }
+
+  h2
+{
+    color: transparent;
+}
 .footer ul li
 {
     list-style: none;
 }
-.footer a:hover
-{
-background-color: #1e1e2a;
-color: white;
-border: 5px;
-border-color: black;
-}
-.footer a
-{
-color:#1e1e2a
-}   
