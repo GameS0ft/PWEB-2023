@@ -4,7 +4,6 @@ body
     margin: 0;
     padding: 0;
     font-family: 'Delicious Handrawn', sans-serif;
-    color: yellowgreen;
     background-color: brown ;
     
 
@@ -13,9 +12,10 @@ body
 /* Header */
 .header-container
 {
-    height: 100vh;
-    width: 100vw;
+    height: 700px;
+    width: 100%;
     background-color: brown;
+    background-attachment: fixed;
     /* background-image: url("../imagens/abimael-foto.png"); */
     background-repeat: no-repeat;
     background-position: center;
@@ -29,30 +29,33 @@ body
     position: relative;
 
 }
-.header-container:nth-child(1)
-{
-    background-image: url("../imagens/foto-abimael.png");
+
+
+
+#abimael-container {
+  background-color: red;
+  color: #D0DB97;
+  background-image: url("../imagens/foto-abimael.png");
 }
-.header-container:nth-child(2)
-{
-    background-image: url("../imagens/abraao-foto.png");
+#abraao-container {
+  background-color: yellow;
+  color: #153243;
+  background-image: url("../imagens/abraao-foto.png");
 }
-
-.header-container:nth-child(3)
-{
-    background-image: url("../imagens/foto-davi.png");
+#davi-container {
+  background-color: cyan;
+  color: #7A7978;
+  background-image: url("../imagens/foto-davi.png");
 }
-
-
-.header-container:nth-child(4)
-{
-    background-image: url("../imagens/isaac-foto.png");
+#isaac-container {
+  background-color: purple;
+  color: #D6D1CD; 
+  background-image: url("../imagens/isaac-foto.png");
 }
-
-
-.header-container:nth-child(5)
-{
-    background-image: url("../imagens/cristian-foto.png");
+#cristian-container {
+  background-color: gray;
+  color: #24272B;
+  background-image: url("../imagens/cristian-foto.png");
 }
 
 h1
@@ -97,9 +100,9 @@ a:hover
 }
 .checkbox
 {
-    height: 100px;
-    width: 100px;
-    position: absolute;
+    height: 51px;
+    width: 51px;
+    position: fixed;
     right: 0;
     top: 0;
     display: flex;
@@ -119,19 +122,19 @@ a:hover
 }
 .checkbox .trace:nth-child(1)
 {
-    top: 20px;
+    top: 12px;
     transform: rotate(0);
 }
 
 .checkbox .trace:nth-child(2)
 {
-    top: 30px;
+    top: 24px;
     transform: rotate(0);
 }
 
 .checkbox .trace:nth-child(3)
 {
-    top: 40px;
+    top: 36px;
     transform: rotate(0);
 }
 #toggle
@@ -150,7 +153,7 @@ a:hover
     width: 10px;
     border-radius: 50%;
     box-shadow: 0px 0px 0px 0px pink;
-    z-index: -1;
+    z-index: 1;
     transition: 400ms ease-in-out 0s;
 }
 .menu-items
@@ -183,10 +186,12 @@ a:hover
     font-size: 40px;
 }
 /* Animação */
+#toggle:checked + .checkbox {
+}
 #toggle:checked + .checkbox .trace:nth-child(1)
 {
     transform: rotate(45deg);
-    top: 47px;
+    top: 25px;
 }
 #toggle:checked + .checkbox .trace:nth-child(2)
 {
@@ -198,7 +203,7 @@ a:hover
 #toggle:checked + .checkbox .trace:nth-child(3)
 {
     transform: rotate(-45deg);
-    top: 48px;
+    top: 25px;
 }
 #toggle:checked + .checkbox
 {
@@ -430,10 +435,6 @@ body
     letter-spacing: 4px;
   }
 
-  h2
-{
-    color: transparent;
-}
 .footer ul li
 {
     list-style: none;
