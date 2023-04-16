@@ -69,6 +69,41 @@ h2
     text-transform: uppercase;
     letter-spacing: 4px;
 }
+
+.scroll-text {
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform .5s, opacity .5s, visibility .5s;
+}
+.header-container:nth-child(2n) .scroll-text {
+  right: -300px;
+}
+
+.header-container:nth-child(2n - 1) .scroll-text {
+  right: 300px;
+}
+.header-container:nth-child(2n) .scroll-text.active {
+  transform: translateX(-300px);
+  opacity: 1;
+  visibility: visible;
+}
+.header-container:nth-child(2n - 1) .scroll-text.active {
+  transform: translateX(300px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-media {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s;
+}
+.scroll-media.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .social-media
 {
     margin-top: 1rem;
@@ -186,8 +221,6 @@ a:hover
     font-size: 40px;
 }
 /* Animação */
-#toggle:checked + .checkbox {
-}
 #toggle:checked + .checkbox .trace:nth-child(1)
 {
     transform: rotate(45deg);
