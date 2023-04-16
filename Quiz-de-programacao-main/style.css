@@ -96,9 +96,13 @@
     font-weight: bold;
   }
   
-  #correct-answers {
+  .correct-answer {
     font-weight: bold;
+    background-color: green;
     color: #2eb94c;
+  }
+  .wrong-answer {
+    background-color: red; 
   }
   
   #questions-qty {

@@ -6,6 +6,7 @@ const scoreContainer = document.querySelector('#score-container');
 const letters = ['a', 'b', 'c', 'd', 'e'];
 let points = 0;
 let actualQuestion = 0;
+let choicing = false;
 
 // perguntas
 const questions = [
@@ -96,6 +97,7 @@ function createQuestion(i) {
   questionNumber.textContent = i + 1;
 
   // inserir alternativas
+  choicing = true;
   questions[i].answers.forEach((answer, i) => {
     // cria template botão quizz
     const answerTemplate = document.querySelector('.answer-template').cloneNode(true);
@@ -116,7 +118,7 @@ function createQuestion(i) {
     answerBox.appendChild(answerTemplate);
 
     // inserir evento click no botão
-    answerTemplate.addEventListener('click', function () {
+    answerTemplate.addEventListener('click', function() {
       checkAnswer(this);
     });
   });
@@ -128,6 +130,9 @@ function createQuestion(i) {
 // verificar resposta do usuário
 function checkAnswer(btn) {
   // seleciona todos os botões
+  if (!choicing) {
+    return;
+  }
   const buttons = answerBox.querySelectorAll('button');
 
   // verifica se resposta correta e add classe
@@ -151,8 +156,9 @@ function checkAnswer(btn) {
 
 // exibe a pŕoxima pergunta no quizz
 function nextQuestion() {
+  choicing = false;
   // timer para usuário ver as respostas
-  setTimeout(function () {
+  setTimeout(function() {
     // verifica se ainda há perguntas
     if (actualQuestion >= questions.length) {
       // apresenta mensagem de sucesso
@@ -192,7 +198,7 @@ function hideOrShowQuizz() {
 
 // reiniciar quizz
 const restartBtn = document.querySelector('#restart');
-restartBtn.addEventListener('click', function () {
+restartBtn.addEventListener('click', function() {
   //zerar jogo
   actualQuestion = 0;
   points = 0;
