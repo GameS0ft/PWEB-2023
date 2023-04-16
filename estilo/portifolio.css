@@ -240,7 +240,7 @@ a:hover
 }
 #toggle:checked + .checkbox
 {
-    background-color: white;
+    background-color: pink;
 }
 #toggle:checked ~ .menu
 {
@@ -341,23 +341,28 @@ a:hover
     width: 100px;
     border-radius: 100%;
     display: block;
-    border: 1px solid white;
+    border: 1px solid black;
     opacity: 0;
     transition: 0.5s ease-in-out;
 }
 .card-wrapper h2
 {
-    font-size: 30px;
-    color: yellowgreen;
+    color: orange;
     font-size: 40px;
     text-transform: uppercase;
     letter-spacing: 4px;
     margin: 0;
     transition: 0.5s ease-in-out;
 }
+
+#h2_card2
+{
+
+    font-size: 28px;
+}
 .card-wrapper p
 {
-    color: yellowgreen;
+    color: rgb(255, 0, 0);
     font-size: 0;
     visibility: visible;
     opacity: 0;
@@ -414,17 +419,17 @@ a:hover
 
 /* LINK E TEXTO */
 
-/* unvisited link */
+/* link não visitado*/
  .texto {
     color: #1e1e2a ;
   }
   
-  /* visited link */
+  /* link visitado */
  .texto:visited {
-    color: pink;
+    color: red;
   }
   
-  /* mouse over link */
+  /* mouse sobre o link */
   .texto:hover {
     background-color: #1e1e2a;
     color: white;
@@ -467,6 +472,12 @@ body
     text-transform: uppercase;
     letter-spacing: 4px;
   }
+
+
+  h2
+{
+    color: transparent;
+}
 
 .footer ul li
 {
