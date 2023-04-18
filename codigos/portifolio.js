@@ -27,10 +27,10 @@ function addObserver(el, options){
 
 function addTriggers(){
 scrollTrigger('.scroll-text', {
-    rootMargin: '-150px 300px'
+    rootMargin: '-21% 21%'
 })
 scrollTrigger('.scroll-media', {
-    rootMargin: '-180px'
+    rootMargin: '-10% 0%'
 })
 }
 

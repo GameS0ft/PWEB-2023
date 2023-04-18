@@ -3,31 +3,63 @@ body
 {
     margin: 0;
     padding: 0;
-    font-family: 'Delicious Handrawn', sans-serif;
-    background-color: brown ;
-    
+    font-family: 'Delicious Handrawn', sans-serif; 
+    font-size: 10px;
+}
 
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+}
+.main {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+}
+.equipe {
+  display: flex;
+  flex-direction: column;
+}
+.projetos {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */
 .header-container
 {
-    height: 700px;
-    width: 100%;
-    background-color: brown;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 115vh;
     background-attachment: fixed;
     /* background-image: url("../imagens/abimael-foto.png"); */
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    background-position: 100%;
+    background-size: 56vmin;
     box-sizing: border-box;
-    padding: 0 112px;
     position: relative;
 
+}
+.header-container .info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex: 6 4;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.header-container .foto {
+  display: flex;
+  flex: 4 6;
 }
 
 
@@ -60,67 +92,76 @@ body
 
 h1
 {
-  font-size: 50px;
+  font-size: 4em;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 0.27em;
 }
 h2
 {
+    font-size: 2em;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 0.27em;
 }
 
-.scroll-text {
-  position: relative;
-  opacity: 0;
-  visibility: hidden;
-  transition: transform .5s, opacity .5s, visibility .5s;
-}
-.header-container:nth-child(2n) .scroll-text {
-  right: -300px;
-}
-
-.header-container:nth-child(2n - 1) .scroll-text {
-  right: 300px;
-}
-.header-container:nth-child(2n) .scroll-text.active {
-  transform: translateX(-300px);
-  opacity: 1;
-  visibility: visible;
-}
-.header-container:nth-child(2n - 1) .scroll-text.active {
-  transform: translateX(300px);
-  opacity: 1;
-  visibility: visible;
+.social-media
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5%;
+    margin-top: 2em;
 }
 
+.social-media a
+{
+    text-decoration: none;
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1e1e2a;
+    border: 2px solid #1e1e2a;
+    transition: .5s ease-in-out;
+}
 .scroll-media {
   opacity: 0;
   visibility: hidden;
   transition: opacity .5s, visibility .5s;
 }
+.scroll-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform .5s, opacity .5s, visibility .5s;
+}
+.header-container:nth-child(2n) .scroll-text {
+  right: -21vw;
+}
+
+.header-container:nth-child(2n - 1) .scroll-text {
+  right: 21vw;
+}
+.header-container:nth-child(2n) .scroll-text.active {
+  transform: translateX(-21vw);
+  opacity: 1;
+  visibility: visible;
+}
+.header-container:nth-child(2n - 1) .scroll-text.active {
+  transform: translateX(21vw);
+  opacity: 1;
+  visibility: visible;
+}
+
 .scroll-media.active {
   opacity: 1;
   visibility: visible;
 }
 
-.social-media
-{
-    margin-top: 1rem;
-    display: flex;
-}
-.social-media a
-{
-    text-decoration: none;
-    color: #1e1e2a;
-    padding: 1rem 4rem;
-    border: 1px solid #1e1e2a;
-    min-width: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .5s ease-in-out;
-}
 a:hover
 {
     background-color: white;
@@ -135,8 +176,8 @@ a:hover
 }
 .checkbox
 {
-    height: 51px;
-    width: 51px;
+    height: 3.5vw;
+    width: 3.5vw;
     position: fixed;
     right: 0;
     top: 0;
@@ -148,28 +189,28 @@ a:hover
 }
 .checkbox .trace
 {
-    width: 50px;
-    height: 2px;
+    width: 3.5vw;
+    height: 0.17vw;
     background-color: #1e1e2a;
     position: fixed;
-    border-radius: 4px;
+    border-radius: 0.5vh;
     transition: 0.5s ease-in-out;
 }
 .checkbox .trace:nth-child(1)
 {
-    top: 12px;
+    top: 0.85vw;
     transform: rotate(0);
 }
 
 .checkbox .trace:nth-child(2)
 {
-    top: 24px;
+    top: 1.7vw;
     transform: rotate(0);
 }
 
 .checkbox .trace:nth-child(3)
 {
-    top: 36px;
+    top: 2.55vw;
     transform: rotate(0);
 }
 #toggle
@@ -181,11 +222,11 @@ a:hover
 .menu
 {
     position: fixed;
-    top: 28px;
-    right: 30px;
+    top: 1.9vw;
+    right: 2.1vw;
     background-color: transparent;
-    height: 4px;
-    width: 10px;
+    height: 0.5vh;
+    width: 0.7vw;
     border-radius: 50%;
     box-shadow: 0px 0px 0px 0px pink;
     z-index: 1;
@@ -213,30 +254,30 @@ a:hover
 }
 .menu-items ul li a
 {
-    margin: 10px 0;
+    margin: 0.7vw 0;
     color: #1e1e2a;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 40px;
+    letter-spacing: 0.25em;
+    font-size: 2.8em;
 }
 /* Animação */
 #toggle:checked + .checkbox .trace:nth-child(1)
 {
     transform: rotate(45deg);
-    top: 25px;
+    top: 1.75vw;
 }
 #toggle:checked + .checkbox .trace:nth-child(2)
 {
-    transform: translate(-100px);
-    width: 30px;
+    transform: translate(-7vw);
+    width: 2.1vw;
     visibility: hidden;
     opacity: 0;
 }
 #toggle:checked + .checkbox .trace:nth-child(3)
 {
     transform: rotate(-45deg);
-    top: 25px;
+    top: 1.75vw;
 }
 #toggle:checked + .checkbox
 {
@@ -252,17 +293,6 @@ a:hover
     visibility: visible;
     opacity: 1;
 }
-/* Cards */
-.container
-{
-    background-color: white;
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin: 3rem 0;
-}
 
 .card-container
 {
@@ -273,10 +303,10 @@ a:hover
 }
 .card 
 {
-    width: 300px;
-    height: 300px;
+    width: 20em;
+    height: 20em;
     border-radius:100% ;
-    margin: 3rem 0 0 0 ;
+    margin: 3em 0 0 0 ;
     display: flex;
     align-items: center;
     background-color: brown;
@@ -324,9 +354,9 @@ a:hover
 
 .card-text
 {
-    font-size: 20px;
+    font-size: 1.4em;
     width: 40%;
-    letter-spacing: 1px;
+    letter-spacing: 0.067em;
     color: yellowgreen;
 }
 .card-wrapper
@@ -343,8 +373,8 @@ a:hover
 {
     content: '';
     position: absolute;
-    height: 100px;
-    width: 100px;
+    height: 6.7em;
+    width: 6.7em;
     border-radius: 100%;
     display: block;
     border: 1px solid black;
@@ -354,9 +384,9 @@ a:hover
 .card-wrapper h2
 {
     color: orange;
-    font-size: 40px;
+    font-size: 2.7em;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 0.25em;
     margin: 0;
     transition: 0.5s ease-in-out;
 }
@@ -364,7 +394,7 @@ a:hover
 #h2_card2
 {
 
-    font-size: 28px;
+    font-size: 1.9em;
 }
 
 #h2_card6
@@ -392,8 +422,8 @@ a:hover
 
 .card:hover > .card-wrapper::before
 {
-    height: 250px;
-    width: 250px;
+    height: 17.5em;
+    width: 17.5em;
     opacity: 1;
 }
 
@@ -402,7 +432,7 @@ a:hover
 {
     opacity: 1;
     visibility: visible;
-    font-size: 20px;
+    font-size: 1.5em;
 }
 
 /* Tira do comentário para ver 2º visual */
@@ -483,7 +513,7 @@ body
   {
     font-size:large;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 0.27em;
   }
 
 
