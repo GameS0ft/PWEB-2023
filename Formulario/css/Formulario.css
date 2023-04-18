@@ -15,7 +15,7 @@
 #subtitulo {
     font-family: sans-serif;
     color: #000000;
-    margin-left: 10%;
+    margin-left: 6.7%;
 } 
 
 #check{
@@ -73,7 +73,7 @@ input, select, textarea, button {
 
 fieldset.grupo .campo {
     float:  left;
-    margin-right: 1em;
+    margin-right: 7em;
 }
 
 
@@ -95,7 +95,7 @@ fieldset.grupo .campo {
 }
 
 
-.botao {
+.botao-concluido {
     font-size: 1.2em;
     background: #000000;
     border: 0;
@@ -112,7 +112,7 @@ fieldset.grupo .campo {
 }
 
 
-.botao:hover {
+.botao-concluido:hover {
     background: rgb(67, 233, 205);
     color: #000000;
     box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
@@ -120,7 +120,7 @@ fieldset.grupo .campo {
 }
 
 
-.botao, select{
+.botao-concluido, select{
     cursor: pointer;
 }
 
@@ -136,6 +136,34 @@ legend {
     border: 1px groove #000000;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     display: block; 
+}
+
+.botao-voltar{
+    font-size: 1.2em;
+    background: #000000;
+    border: 0;
+    margin-bottom: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: fixed;
+    top: 1%;
+    left: 1%;
+    margin-right: -50%;
+    transform: translate(-0%, -0%)
+    
+  }
+
+.botao-voltar:hover {
+    background: rgb(67, 233, 205);
+    color: #000000;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+.botao-voltar, select{
+    cursor: pointer;
 }
 
 
