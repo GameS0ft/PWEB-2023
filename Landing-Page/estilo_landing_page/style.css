@@ -1,0 +1,181 @@
+/* Estilos Gerais */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #252525;
+	color: #fff;
+}
+
+a {
+	color: #337ab7;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #23527c;
+	text-decoration: underline;
+}
+
+/* Estilos do Cabeçalho */
+header {
+	background-color: #333;
+	padding: 27px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav ul li {
+	margin-left: 20px;
+}
+
+nav ul li:first-child {
+	margin-left: 0;
+}
+
+nav ul li a {
+	color: #fff;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+/* Estilos do conteúdo principal */
+.principal {
+	background-position: center;
+	background-size: cover;
+	text-align: left;
+	padding: 50px 0;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.principal h1 {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.principal p {
+	font-size: 18px;
+}
+
+.call-to-action {
+	background-color: #fff;
+	color: #333;
+	padding: 15px 30px;
+	border: none;
+	margin: 20px 200px 0px;
+	border-radius: 25px;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.call-to-action:hover {
+	background-color: #333;
+	color: #fff;
+}
+
+.imagem-principal {
+	margin: 8px 40px 0px 0px;
+	position: relative;
+	border-radius: 10px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.texto-principal {
+	margin: 105px 160px 0px 90px;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Estilos dos Recursos */
+.features {
+	padding: 80px 0;
+	text-align: center;
+}
+
+.features h2 {
+	font-size: 36px;
+	margin: 0;
+}
+
+.features ul {
+	margin-top: 40px;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.features li {
+	margin: 20px;
+	font-size: 24px;
+	display: flex;
+	align-items: center;
+	background-color: #23527c;
+	padding: 10px 20px;
+	border-radius: 10px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos das Capturas de Tela */
+.screenshots {
+	padding: 80px 0;
+	text-align: center;
+}
+
+.screenshots h2 {
+	font-size: 36px;
+	margin: 0;
+}
+
+.imagens {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 40px;
+}
+
+.imagens img {
+	width: 300px;
+	height: auto;
+	margin: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos do Recall-to-Action */
+.recall-to-action {
+	background-color: #333;
+	padding: 80px 0;
+	text-align: center;
+	color: #fff;
+}
+
+.recall-to-action h2 {
+	font-size: 36px;
+	margin: 0;
+}
+
+.recall-to-action p {
+	font-size: 24px;
+	margin: 20px 0 30px;
+}
+
+/* Estilos do Rodapé */
+footer {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+}
