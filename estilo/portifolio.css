@@ -316,6 +316,12 @@ a:hover
 }
 
 
+.card-container:nth-child(6) .card
+{
+    background-image: url("../imagens/landing-page.png");
+}
+
+
 .card-text
 {
     font-size: 20px;
@@ -360,6 +366,13 @@ a:hover
 
     font-size: 28px;
 }
+
+#h2_card6
+{
+
+    font-size: 50px;
+}
+
 .card-wrapper p
 {
     color: rgb(255, 0, 0);
