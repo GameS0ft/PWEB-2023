@@ -7,15 +7,17 @@ body {
 	color: #fff;
 }
 
-a {
+a , button{
+	border: 0;
+	background-color: transparent;
 	color: #337ab7;
 	text-decoration: none;
 }
 
-a:hover {
+a:hover, button:hover {
 	color: #23527c;
-	text-decoration: underline;
 }
+
 
 /* Estilos do Cabeçalho */
 header {
@@ -31,15 +33,15 @@ nav ul {
 	justify-content: flex-end;
 }
 
-nav ul li {
+nav ul li, button {
 	margin-left: 20px;
 }
 
-nav ul li:first-child {
+nav ul button {
 	margin-left: 0;
 }
 
-nav ul li a {
+nav ul li a, button {
 	color: #fff;
 	font-weight: bold;
 	font-size: 22px;
@@ -71,7 +73,7 @@ nav ul li a {
 	color: #333;
 	padding: 15px 30px;
 	border: none;
-	margin: 20px 200px 0px;
+	margin: 20px 400px 0px;
 	border-radius: 25px;
 	font-size: 18px;
 	font-weight: bold;
