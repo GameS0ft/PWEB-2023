@@ -310,7 +310,6 @@ a:hover
     display: flex;
     align-items: center;
     background-color: brown;
-    /* background-image: url("../imagens/homepage.png"); */
     background-position: center ;
     background-size: cover;
     background-repeat: no-repeat;
@@ -384,24 +383,29 @@ a:hover
 .card-wrapper h2
 {
     color: orange;
-    font-size: 2.7em;
+    font-size: 1.9em;
     text-transform: uppercase;
     letter-spacing: 0.25em;
     margin: 0;
     transition: 0.5s ease-in-out;
 }
 
-#h2_card2
+#h2_card1, #h2_card4, #h2_card6
+{
+font-size: 2.7em;
+}
+
+#h2_card3
 {
 
     font-size: 1.9em;
 }
 
-#h2_card6
+/* #h2_card6
 {
 
     font-size: 50px;
-}
+} */
 
 .card-wrapper p
 {
@@ -420,35 +424,36 @@ a:hover
 }
 /* Borda Visivel (comentar para ver 2º visual  */
 
-.card:hover > .card-wrapper::before
+/* .card:hover > .card-wrapper::before
 {
     height: 17.5em;
     width: 17.5em;
     opacity: 1;
-}
+} */
 
 /*"venha ver" visivel */
-.card:hover > .card-wrapper p
+/* .card:hover > .card-wrapper p
 {
     opacity: 1;
     visibility: visible;
     font-size: 1.5em;
-}
-
-/* Tira do comentário para ver 2º visual */
-
-/* .card:hover > .card-wrapper a
-{
-    opacity: 1;
-    visibility: visible;
-    font-size: 20px;
 } */
 
 /* Tira do comentário para ver 2º visual */
 
-/* .card-wrapper a
+.card:hover > .card-wrapper a
 {
-    color: yellowgreen;
+    opacity: 1;
+    visibility: visible;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+/* Tira do comentário para ver 2º visual */
+
+.card-wrapper a
+{
+    color: red;
     font-size: 0;
     visibility: visible;
     opacity: 0;
@@ -456,7 +461,7 @@ a:hover
     text-transform: uppercase;
     transition: 0.5s ease-in-out;
 
-} */
+}
 
 
 
@@ -499,7 +504,7 @@ body
   {
     background-color: brown;
     display: flex;
-    align-items: left;
+    align-items: center;
     justify-content: center;
     color: pink;
     height: auto;
@@ -508,13 +513,21 @@ body
     background-position: center;
     background-size:contain;
     background-repeat: no-repeat;
+    
   }
   footer h1
   {
-    font-size:large;
+    font-size:1em;
     text-transform: uppercase;
     letter-spacing: 0.27em;
   }
+
+#h1_empresa
+{
+  padding-left: 25%;
+  text-transform: uppercase;
+  letter-spacing: 0.27em;
+}
 
 
 #sobre h2
