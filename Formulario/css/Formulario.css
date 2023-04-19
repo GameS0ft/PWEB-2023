@@ -4,6 +4,22 @@
     padding: 0;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
 
 #titulo {
     font-family: sans-serif;
@@ -18,8 +34,23 @@
     margin-left: 6.7%;
 } 
 
-#check{
-    display: inline-block;
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#check-campo {
+  display: block;
+}
+#check-campo div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: flex-start;
+}
+input {
+  margin-right: 0.5em;
 }
 
 
@@ -35,9 +66,6 @@ body {
     font-family: sans-serif;
     font-size: 1em;
     color: #000000;
-    margin-left: 36%;
-    margin-top: 2%;
-    justify-content: center;
 }
 
 
@@ -60,20 +88,32 @@ input, select, textarea, button {
 
 
 .campo {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 1em;
+    min-width: 40%;
+}
+#xp_campo {
+  width: 100%;
+}
+#xp_campo textarea {
+  width: 90%;
 }
 
 
 .campo label {
     margin-bottom: 0.2em;
     color: #000000;
-    display: block;
 }
 
 
-fieldset.grupo .campo {
-    float:  left;
-    margin-right: 7em;
+fieldset.grupo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 
@@ -81,7 +121,6 @@ fieldset.grupo .campo {
     padding: 0.2em;
     border: 1px solid #000000;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    display: block;
 }
 
 
@@ -107,7 +146,6 @@ fieldset.grupo .campo {
     position: initial;
     top: 90%;
     left: 50%;
-    margin-right: -50%;
     transform: translate(-0%, -0%)
 }
 
@@ -128,7 +166,6 @@ fieldset.grupo .campo {
     padding: 0.2em;
     border: 1px solid #000000;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    display: block;
 }
 
 legend {
@@ -147,10 +184,9 @@ legend {
     padding: 0.2em 0.6em;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-    position: fixed;
+    margin: 1%;
     top: 1%;
     left: 1%;
-    margin-right: -50%;
     transform: translate(-0%, -0%)
     
   }

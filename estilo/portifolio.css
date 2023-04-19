@@ -4,7 +4,7 @@ body
     margin: 0;
     padding: 0;
     font-family: 'Delicious Handrawn', sans-serif; 
-    font-size: 10px;
+    font-size: 6px;
 }
 
 
@@ -17,7 +17,23 @@ body
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 600px) {
+
+@media (min-width: 420px) {
+  body {
+    font-size: 8px;
+  }
+}
+@media (min-width: 560px) {
+  body {
+    font-size: 10px;
+  }
+}
+@media (min-width: 800px) {
+  body {
+    font-size: 12px;
+  }
+}
+@media (min-width: 950px) {
   body {
     font-size: 15px;
   }
@@ -52,41 +68,41 @@ body
   display: flex;
   flex-direction: column;
   text-align: center;
-  flex: 6 4;
+  flex: 6;
   height: 100%;
   align-items: center;
   justify-content: center;
 }
 .header-container .foto {
   display: flex;
-  flex: 4 6;
+  flex: 5;
 }
 
 
 
 #abimael-container {
-  background-color: red;
+  background-color: #7B0707;
   color: #D0DB97;
   background-image: url("../imagens/foto-abimael.png");
 }
 #abraao-container {
-  background-color: yellow;
+  background-color: #F6FEAA;
   color: #153243;
   background-image: url("../imagens/abraao-foto.png");
 }
 #davi-container {
-  background-color: cyan;
-  color: #7A7978;
+  background-color: #153243;
+  color: #DEC5E3;
   background-image: url("../imagens/foto-davi.png");
 }
 #isaac-container {
-  background-color: purple;
-  color: #D6D1CD; 
+  background-color: #DEC5E3;
+  color: #006C67; 
   background-image: url("../imagens/isaac-foto.png");
 }
 #cristian-container {
-  background-color: gray;
-  color: #24272B;
+  background-color: #006C67;
+  color: white;
   background-image: url("../imagens/cristian-foto.png");
 }
 
@@ -110,6 +126,7 @@ h2
     justify-content: center;
     width: 100%;
     height: 5%;
+    max-height: 3em;
     margin-top: 2em;
 }
 
@@ -121,9 +138,12 @@ h2
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #1e1e2a;
-    border: 2px solid #1e1e2a;
+    color: currentColor;
+    border: 2px solid currentColor;
     transition: .5s ease-in-out;
+}
+.social-media a:hover{
+  color: #1e1e2a;
 }
 .scroll-media {
   opacity: 0;
@@ -397,11 +417,6 @@ a:hover
     font-size: 1.9em;
 }
 
-#h2_card6
-{
-
-    font-size: 50px;
-}
 
 .card-wrapper p
 {

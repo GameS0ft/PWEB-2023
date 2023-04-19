@@ -1,222 +1,243 @@
 <!doctype html>
-<html lang="pt-br"> 
+<html lang="pt-br">
 
-    <head>
-        
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-        
-        <link rel="stylesheet" type="text/css" href="css/Formulario.css" media="screen">
-        <link rel="icon" type="image/x-icon" href="image/GameSoft.ico">
+<head>
 
-        
-        <title>Página de Formulário</title>
-    </head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <body>
-        
-        <button class="botao-voltar" onclick="history.back()"> Voltar </button> 
 
-    
-        <div>
-            <h1 id="titulo">Formulário de Inscrição</h1>
-            <p id="subtitulo">Por favor, preencha seus dados nos campos abaixo</p>
-            <br>
-        </div>
+  <link rel="stylesheet" type="text/css" href="css/Formulario.css" media="screen">
+  <link rel="icon" type="image/x-icon" href="image/GameSoft.ico">
 
-        
+
+  <title>Página de Formulário</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <button class="botao-voltar" onclick="history.back()"> Voltar </button>
+    </header>
+    <main>
+      <div>
+        <h1 id="titulo">Formulário de Inscrição</h1>
+        <p id="subtitulo">Por favor, preencha seus dados nos campos abaixo</p>
+        <br>
+
+
         <form>
 
-            <fieldset class="grupo">
-                <legend><strong>Dados Pessoais</strong></legend><br>
-                
-                <div class="campo">
-                    <label for="nome"><strong>Nome</strong></label>
-                    <input type="text" name="nome" id="nome" placeholder="Ex: Nilton" required>
-                </div>
-
-                <div class="campo">
-                    <label for="sobrenome"><strong>Sobrenome</strong></label>
-                    <input type="text" name="sobrenome" id="sobrenome" placeholder="Ex: Darmont Coelho" required>
-                </div>
-            </fieldset> 
-
-            <fieldset class="grupo">
-
-                <div class="campo">
-                    <label for="cpf"><strong>CPF</strong></label>
-                    <input type="text" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" required>
-                </div>
-
-                <div class="campo">
-                    <label for="rg"><strong>RG</strong></label>
-                    <input type="text" name="rg" id="rg" placeholder="XXXXXXXXXX-X" pattern="[0-9]{10}-[0-9]" required>
-                </div>
-                
-            </fieldset>
-            
-            <div class="campo">
-                <label for="email"><strong>Email</strong></label>
-                <input type="email" name="email" id="email" placeholder="nome@gmail.com" required>
-            </div>
-
-            <fieldset class="grupo">
-
-                <div class="campo">
-                    <label for="endereço"><strong>Endereço</strong></label>
-                    <input type="text" name="endereço" id="endereço" placeholder="Ex: Vila Natália" required>
-                </div>
-
-                <div class="campo">
-                    <label for="complemento"><strong>Complemento</strong></label>
-                    <input type="text" name="complemento" id="complemento" placeholder="Ex: 404" required>
-                </div>
-                
-            </fieldset>
-
-            <fieldset class="grupo">
-
-                <div class="campo">
-                    <label for="bairro"><strong>Bairro</strong></label>
-                    <input type="text" name="bairro" id="bairro" placeholder="Ex: Presidente Kennedy" required>
-                </div>
-
-                <div class="campo">
-                    <label for="ponto de referência"><strong>Ponto de Referência</strong></label>
-                    <input type="text" name="ponto de referência" id="ponto de referência" placeholder="Ex: Rio Mar Kennedy" required>
-                </div>
-                
-            </fieldset>
+          <fieldset class="grupo">
+            <legend><strong>Dados Pessoais</strong></legend><br>
 
             <div class="campo">
-                <label for="cep"><strong>CEP</strong></label>
-                <input type="text" name="cep" id="cep" placeholder="XXXXX-XXX" pattern="[0-9]{5}-[0-9]{3}" required>
-            </div>
-
-            <fieldset class="grupo">
-                
-                <div class="campo">
-                    <label for="cidade"><strong>Cidade</strong></label>
-                    <input type="text" name="cidade" id="cidade" placeholder="Ex: Fortaleza" required>
-                </div>
-
-                <div class="campo">
-                    <label for="estado"><strong>Estado</strong></label>
-                    <input type="text" name="estado" id="estado" placeholder="Ex: Ceará" required>
-                </div>
-            </fieldset>
-
-            <div class="campo">
-                <label for="telefone"><strong>Telefone</strong></label>
-                <input type="tel" name="telefone" id="telefone" placeholder="(XX) XXXXX-XXXX" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" required>
-            </div>
-
-            <fieldset class="grupo">
-                
-                <div class="campo">
-                    <label for="filiação1"><strong>Filiação 1</strong></label>
-                    <input type="text" name="filiação1" id="filiação1" placeholder="Ex: Roberta Queiroga Darmont" required>
-                </div>
-
-                <div class="campo">
-                    <label for="filiação2"><strong>Filiação 2</strong></label>
-                    <input type="text" name="filiação2" id="filiação2" placeholder="Ex: Aurélio Teles Coelho" required>
-                </div>
-            </fieldset>
-
-            <fieldset class="grupo">
-                
-                <div class="campo">
-                    <label for="nacionalidade"><strong>Nacionalidade</strong></label>
-                    <input type="text" name="nacionalidade" id="nacionalidade" placeholder="Ex: Brasileira" required>
-                </div>
-
-                <div class="campo">
-                    <label for="eCivil"><strong>Estado Civil</strong></label>
-                    <input type="text" name="eCivil" id="eCivil" placeholder="Ex: Solteiro" required>
-                </div>
-            </fieldset>
-
-            <div class="campo">
-                <label><strong>Sexo:</strong></label><br>
-                <label>
-                    <input type="radio" name="genero" value="masculino" checked>Masculino
-                </label>
-                <label>
-                    <input type="radio" name="genero" value="feminino">Feminino
-                </label>
-                <label>
-                    <input type="radio" name="genero" value="outro">Outro
-                </label>
+              <label for="nome"><strong>Nome</strong></label>
+              <input type="text" name="nome" id="nome" placeholder="Ex: Nilton" required>
             </div>
 
             <div class="campo">
-                <label for="dNascimento"><strong>Data de Nascimento</strong></label>
-                <input type="date" name="dNascimento" id="dNascimento" required>
+              <label for="sobrenome"><strong>Sobrenome</strong></label>
+              <input type="text" name="sobrenome" id="sobrenome" placeholder="Ex: Darmont Coelho" required>
+            </div>
+          </fieldset>
+
+          <fieldset class="grupo">
+
+            <div class="campo">
+              <label for="cpf"><strong>CPF</strong></label>
+              <input type="text" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX"
+                pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" required>
             </div>
 
             <div class="campo">
-                <label for="etnia"><strong>Etnia</strong></label>
-                <select id="etnia" required>
-                  <option selected disabled value="">Selecione</option>
-                  <option>Branco</option>
-                  <option>Pardo</option>
-                  <option>Preto</option>
-                  <option>Amarelo</option>
-                  <option>Indígena</option>
-                </select>
-            </div><br>
-
-            <fieldset><legend><strong>Dados Profissionais</strong></legend></fieldset><br>
-            <div class="campo">
-                <label for="formação"><strong>Formação Acadêmica</strong></label>
-                <select id="formação" required>
-                  <option selected disabled value="">Selecione</option>
-                  <option>Ensino Infantil Completo</option>
-                  <option>Ensino Infantil Incompleto</option>
-                  <option>Ensino Fundamental Completo</option>
-                  <option>Ensino Fundamental Incompleto</option>
-                  <option>Ensino Médio Completo</option>
-                  <option>Ensino Médio Incompleto</option>
-                  <option>Ensino Superior Completo</option>
-                  <option>Ensino Superior Incompleto</option>
-                </select>
+              <label for="rg"><strong>RG</strong></label>
+              <input type="text" name="rg" id="rg" placeholder="XXXXXXXXXX-X" pattern="[0-9]{10}-[0-9]" required>
             </div>
 
-            <fieldset class="grupo">
-                
-                <div id="check">
-                    <label><strong>Quais suas experiências em desenvolvimento de jogos ?</strong></label><br><br>
-                    <input type="checkbox" id="tecnologia1" name="tecnologia1" value="Designer de Games">
-                    <label for="tecnologia1"> Designer de Games</label>
-                    <input type="checkbox" id="tecnologia2" name="tecnologia2" value="Animador">
-                    <label for="tecnologia2"> Animador</label>
-                    <input type="checkbox" id="tecnologia3" name="tecnologia3" value="Técnico em 3D">
-                    <label for="tecnologia3"> Técnico em 3D</label>
-                    <input type="checkbox" id="tecnologia4" name="tecnologia4" value="Programador">
-                    <label for="tecnologia4"> Programador</label>
-                    <input type="checkbox" id="tecnologia5" name="tecnologia5" value="Roteirista">
-                    <label for="tecnologia5"> Roteirista </label>
-                </div>
-            </fieldset>
-            
+          </fieldset>
+
+          <div class="campo">
+            <label for="email"><strong>Email</strong></label>
+            <input type="email" name="email" id="email" placeholder="nome@gmail.com" required>
+          </div>
+
+          <fieldset class="grupo">
 
             <div class="campo">
-                <br>
-                <label for="experiencia"><strong>Escreva um pouco sobre você e suas experiências em desenvolvimento de jogos: </strong></label>
-                <textarea rows="6" style="width: 34em" id="experiencia" name="experiencia" placeholder="Informe em resumo alguns pontos principais, como: cargo, atividade exercida, nome de empresas e período trabalhado, entre outros pontos relevantes"></textarea>
+              <label for="endereço"><strong>Endereço</strong></label>
+              <input type="text" name="endereço" id="endereço" placeholder="Ex: Vila Natália" required>
             </div>
 
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                <label class="form-check-label" for="invalidCheck"><strong>Eu concordo com os termos e declaro que as informações prestadas são verdadeiras.</strong> </label>
-            </div><br>
-            
-            <button class="botao-concluido" type="submit" onsubmit="">Concluído</button>            
+            <div class="campo">
+              <label for="complemento"><strong>Complemento</strong></label>
+              <input type="text" name="complemento" id="complemento" placeholder="Ex: 404" required>
+            </div>
+
+          </fieldset>
+
+          <fieldset class="grupo">
+
+            <div class="campo">
+              <label for="bairro"><strong>Bairro</strong></label>
+              <input type="text" name="bairro" id="bairro" placeholder="Ex: Presidente Kennedy" required>
+            </div>
+
+            <div class="campo">
+              <label for="ponto de referência"><strong>Ponto de Referência</strong></label>
+              <input type="text" name="ponto de referência" id="ponto de referência" placeholder="Ex: Rio Mar Kennedy"
+                required>
+            </div>
+
+          </fieldset>
+
+          <div class="campo">
+            <label for="cep"><strong>CEP</strong></label>
+            <input type="text" name="cep" id="cep" placeholder="XXXXX-XXX" pattern="[0-9]{5}-[0-9]{3}" required>
+          </div>
+
+          <fieldset class="grupo">
+
+            <div class="campo">
+              <label for="cidade"><strong>Cidade</strong></label>
+              <input type="text" name="cidade" id="cidade" placeholder="Ex: Fortaleza" required>
+            </div>
+
+            <div class="campo">
+              <label for="estado"><strong>Estado</strong></label>
+              <input type="text" name="estado" id="estado" placeholder="Ex: Ceará" required>
+            </div>
+          </fieldset>
+
+          <div class="campo">
+            <label for="telefone"><strong>Telefone</strong></label>
+            <input type="tel" name="telefone" id="telefone" placeholder="(XX) XXXXX-XXXX"
+              pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" required>
+          </div>
+
+          <fieldset class="grupo">
+
+            <div class="campo">
+              <label for="filiação1"><strong>Filiação 1</strong></label>
+              <input type="text" name="filiação1" id="filiação1" placeholder="Ex: Roberta Queiroga Darmont" required>
+            </div>
+
+            <div class="campo">
+              <label for="filiação2"><strong>Filiação 2</strong></label>
+              <input type="text" name="filiação2" id="filiação2" placeholder="Ex: Aurélio Teles Coelho" required>
+            </div>
+          </fieldset>
+
+          <fieldset class="grupo">
+
+            <div class="campo">
+              <label for="nacionalidade"><strong>Nacionalidade</strong></label>
+              <input type="text" name="nacionalidade" id="nacionalidade" placeholder="Ex: Brasileira" required>
+            </div>
+
+            <div class="campo">
+              <label for="eCivil"><strong>Estado Civil</strong></label>
+              <input type="text" name="eCivil" id="eCivil" placeholder="Ex: Solteiro" required>
+            </div>
+          </fieldset>
+
+          <div class="campo">
+            <label><strong>Sexo:</strong></label><br>
+            <label>
+              <input type="radio" name="genero" value="masculino" checked>Masculino
+            </label>
+            <label>
+              <input type="radio" name="genero" value="feminino">Feminino
+            </label>
+            <label>
+              <input type="radio" name="genero" value="outro">Outro
+            </label>
+          </div>
+
+          <div class="campo">
+            <label for="dNascimento"><strong>Data de Nascimento</strong></label>
+            <input type="date" name="dNascimento" id="dNascimento" required>
+          </div>
+
+          <div class="campo">
+            <label for="etnia"><strong>Etnia</strong></label>
+            <select id="etnia" required>
+              <option selected disabled value="">Selecione</option>
+              <option>Branco</option>
+              <option>Pardo</option>
+              <option>Preto</option>
+              <option>Amarelo</option>
+              <option>Indígena</option>
+            </select>
+          </div><br>
+
+          <fieldset>
+            <legend><strong>Dados Profissionais</strong></legend>
+          </fieldset><br>
+          <div class="campo">
+            <label for="formação"><strong>Formação Acadêmica</strong></label>
+            <select id="formação" required>
+              <option selected disabled value="">Selecione</option>
+              <option>Ensino Infantil Completo</option>
+              <option>Ensino Infantil Incompleto</option>
+              <option>Ensino Fundamental Completo</option>
+              <option>Ensino Fundamental Incompleto</option>
+              <option>Ensino Médio Completo</option>
+              <option>Ensino Médio Incompleto</option>
+              <option>Ensino Superior Completo</option>
+              <option>Ensino Superior Incompleto</option>
+            </select>
+          </div>
+
+          <fieldset class="grupo" id="check-campo">
+
+              <label><strong>Quais suas experiências em desenvolvimento de jogos ?</strong></label><br><br>
+            <div id="check">
+              <div>
+              <input type="checkbox" id="tecnologia1" name="tecnologia1" value="Designer de Games">
+              <label for="tecnologia1"> Designer de Games</label>
+              </div>
+              <div>
+              <input type="checkbox" id="tecnologia2" name="tecnologia2" value="Animador">
+              <label for="tecnologia2"> Animador</label>
+              </div>
+              <div>
+              <input type="checkbox" id="tecnologia3" name="tecnologia3" value="Técnico em 3D">
+              <label for="tecnologia3"> Técnico em 3D</label>
+              </div>
+              <div>
+              <input type="checkbox" id="tecnologia4" name="tecnologia4" value="Programador">
+              <label for="tecnologia4"> Programador</label>
+              </div>
+              <div>
+              <input type="checkbox" id="tecnologia5" name="tecnologia5" value="Roteirista">
+              <label for="tecnologia5"> Roteirista </label>
+              </div>
+            </div>
+          </fieldset>
+
+
+          <div class="campo" id="xp_campo">
+            <br>
+            <label for="experiencia"><strong>Escreva um pouco sobre você e suas experiências em desenvolvimento de
+                jogos:
+              </strong></label>
+            <textarea rows="6" id="experiencia" name="experiencia"
+              placeholder="Informe em resumo alguns pontos principais, como: cargo, atividade exercida, nome de empresas e período trabalhado, entre outros pontos relevantes"></textarea>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck"><strong>Eu concordo com os termos e declaro que as
+                informações prestadas são verdadeiras.</strong> </label>
+          </div><br>
+
+          <button class="botao-concluido" type="submit" onsubmit="">Concluído</button>
 
         </form>
-
-    </body>
+      </div>
+    </main>
+  </div>
+</body>
 
 </html>
