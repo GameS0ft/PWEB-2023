@@ -371,6 +371,12 @@ a:hover
 }
 
 
+.card-container:nth-child(7) .card
+{
+    background-image: url("../imagens/calculadora.png");
+}
+
+
 .card-text
 {
     font-size: 1.4em;
@@ -410,22 +416,16 @@ a:hover
     transition: 0.5s ease-in-out;
 }
 
-#h2_card1, #h2_card4, #h2_card6
+#h2_card1, #h2_card4, #h2_card6, #h2_card7
 {
 font-size: 2.7em;
 }
 
-#h2_card3
+#h2_card7
 {
-
-    font-size: 1.9em;
+font-size: 2.5em;
 }
 
-/* #h2_card6
-{
-
-    font-size: 50px;
-} */
 
 .card-wrapper p
 {
