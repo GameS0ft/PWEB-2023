@@ -34,6 +34,15 @@ body {
   grid-row: 2;
 }
 .button {
+  background-color: #FA853D;
+  border: none;
+  border-radius: 5px;
+  font-size: 2em;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.number.button {
   background-color: #9E9495;
   border: none;
   border-radius: 5px;

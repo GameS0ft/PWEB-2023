@@ -1,17 +1,23 @@
 window.addEventListener("load", init)
 let buttons, display, cls, equals, numbers, operators, decimal;
 
-
+//The object that stores the values for operators.
+//This allows the operators to be anything, the calculation won't be compromised.
 let operatorsObj = { "add": '', "subtract": '', "multiply": '', "divide": '' };
+
+//The values of each operator, this allows some indexing techiniques
 let operatorsObjValues = [];
+
+//Arithmetic functions that will be chosen through the indexing techiniques
 const methods = [sum, sum, multiply, divide];
-let operatorsLen = 0;
 
 //total is calculated every time the user inputs an operator
 let total = 0;
+
 //stringBuffer only stores one float (including a negative one) as string.
-let stringBuffer = "0";
-//buffer stores up to 4 elements at once: number operator1 number operator2
+let stringBuffer = '';
+
+//buffer stores elements like floats and operators to be used in the calculation
 let buffer = [];
 
 function init() {
@@ -30,6 +36,8 @@ function init() {
     });
   })
   operators.forEach(button => {
+    //reading the value of each operator in the HTML file
+    //and assgining to operatorsObj Object
     switch (button.id) {
       case 'add':
         operatorsObj["add"] = button.innerText;
@@ -43,15 +51,15 @@ function init() {
       case 'divide':
         operatorsObj["divide"] = button.innerText;
         break;
-
     }
+    //That makes the code a litte more flexible
+
     button.addEventListener("click", function() {
       handleOperator(button);
     });
   })
 
   operatorsObjValues = Object.values(operatorsObj);
-  operatorsLen = operatorsObjValues.length;
   clear();
 
 }
@@ -59,15 +67,15 @@ function init() {
 
 function clear() {
   display.innerText = '0';
-  stringBuffer = display.innerText;
+  stringBuffer = '';
   setTotal(0);
-  // console.log(buffer);
 }
 
 function strPut(text, sym) {
-  if (text == null)
+  if (text == '')
     text = '0';
   if (text == '0') {
+    //if the user starts typing the decimal, so consider the zero before.
     if (sym != decimal.innerText) {
       text = sym;
       return text;
@@ -80,8 +88,9 @@ function strPut(text, sym) {
 }
 
 function setTotal(value) {
-  buffer = [value, operatorsObj['add']]
+  buffer = [];
   total = value;
+  stringBuffer = transform_str(value.toString(), false);
 }
 
 function handleNumber(button) {
@@ -94,35 +103,45 @@ function handleNumber(button) {
 }
 function handleOperator(button) {
   let op = button.innerText;
-  if (stringBuffer == '0' && operatorsObjValues.indexOf(display.innerText[display.innerText.length - 1]) != -1)
-    return;
+
+  //let it changes operator and cuts the last operator
+  if (stringBuffer == '' && operatorsObjValues.lastIndexOf(display.innerText[display.innerText.length - 1]) != -1)
+    display.innerText = display.innerText.slice(0, -1);
+
+  // console.log(stringBuffer);
   pushOperation(op);
   display.innerText = strPut(display.innerText, op);
 }
 
 function pushOperation(op) {
-  if (stringBuffer == '0') {
+  //change operator
+  if (stringBuffer == '') {
     buffer[buffer.length - 1] = op;
     return;
   }
+
+  //all subtractions are also sums with negative number.
   if (last(buffer) == operatorsObj['subtract']) {
     buffer[buffer.length - 1] = operatorsObj['add'];
-    stringBuffer = '-' + stringBuffer;
+    stringBuffer = operatorsObj['subtract'] + stringBuffer;
   }
+
+  //prepares the buffer to parsing, replacing characters.
+  stringBuffer = transform_str(stringBuffer, true)
+
   buffer.push(parseFloat(stringBuffer));
   buffer.push(op);
   buffer = resolve(buffer);
   total = buffer[0];
-  console.log("total =" + total)
-  stringBuffer = '0';
+  stringBuffer = '';
+
 }
 
 function resolve(buf) {
-  console.log(buf)
+  if (buf.length < 4)
+    return buf;
   if (buf.length > 4) {
-    console.log(buf.slice(0, 2))
     buf = buf.slice(0, 2).concat(resolve(buf.slice(2)))
-    console.log("recall: " + buf);
   }
   const num1 = buf[0];
   const op1 = buf[1];
@@ -141,15 +160,30 @@ function resolve(buf) {
 }
 
 function showResult() {
-  pushOperation(operatorsObj['add'])
+  //pushes any operation to calculate total
+  pushOperation(operatorsObj['add']);
   setTotal(total);
-  display.innerText = total;
+
+  //prepares the total to display on screen
+  //using the defined symbols in the HTML
+  display.innerText = transform_str(total.toString(), false);
 }
 
 function last(list) {
   return list[list.length - 1];
 }
 
+function transform_str(string, isInput) {
+  if (isInput) {
+    string = string.replace(decimal.innerText, ".");
+    string = string.replace(operatorsObj['subtract'], '-');
+  }
+  else {
+    string = string.replace(".", decimal.innerText);
+    string = string.replace('-', operatorsObj['subtract']);
+  }
+  return string;
+}
 
 function sum(num1, num2) {
   return num1 + num2;
