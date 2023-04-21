@@ -79,7 +79,7 @@ function strPut(text, sym) {
 
 }
 
-function setTotal(value){
+function setTotal(value) {
   buffer = [value, operatorsObj['add']]
   total = value;
 }
@@ -94,13 +94,17 @@ function handleNumber(button) {
 }
 function handleOperator(button) {
   let op = button.innerText;
-  if (stringBuffer == '0' && operatorsObjValues.indexOf(buffer[buffer.length - 1]) != -1)
+  if (stringBuffer == '0' && operatorsObjValues.indexOf(display.innerText[display.innerText.length - 1]) != -1)
     return;
   pushOperation(op);
   display.innerText = strPut(display.innerText, op);
 }
 
 function pushOperation(op) {
+  if (stringBuffer == '0') {
+    buffer[buffer.length - 1] = op;
+    return;
+  }
   if (last(buffer) == operatorsObj['subtract']) {
     buffer[buffer.length - 1] = operatorsObj['add'];
     stringBuffer = '-' + stringBuffer;
@@ -138,6 +142,7 @@ function resolve(buf) {
 
 function showResult() {
   pushOperation(operatorsObj['add'])
+  setTotal(total);
   display.innerText = total;
 }
 
