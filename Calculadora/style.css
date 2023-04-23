@@ -69,3 +69,20 @@ body {
     padding: 5px;
   }
 }
+
+.btn-voltar{
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .5rem;
+  padding-right: 1rem;
+  border:var(--border);
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+  color:var(--blue);
+  cursor: pointer;
+  font-size: 1rem;
+  background: #fff;
+  top: 1%;
+  left: 1%;
+  position: fixed;
+}
