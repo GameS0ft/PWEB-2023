@@ -1,205 +1,138 @@
-
-* {
-    margin: 0;
-    padding: 0;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, rgb(90, 20, 220), rgb(36, 17, 71));
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-header {
-  display: flex;
-}
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-#titulo {
-    font-family: sans-serif;
-    color: #000000;
-    margin-left: 7%;
-} 
-
-
-#subtitulo {
-    font-family: sans-serif;
-    color: #000000;
-    margin-left: 6.7%;
-} 
-
-form {
+.box{
+    color: white;
+    position: sticky;
+    left: 38.2%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 15px;
+    width: 20%;
+    min-width: 380px;
+    max-width: 800px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-#check-campo {
-  display: block;
-}
-#check-campo div {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-content: flex-start;
-}
-input {
-  margin-right: 0.5em;
-}
-
-
-
-fieldset {
-    border: 0;
-}
-
-
-body {
-    background: rgb(86,32,190);
-    background: linear-gradient(345deg, rgba(86,32,190,1) 0%, rgba(32,192,221,1) 100%);
-    font-family: sans-serif;
-    font-size: 1em;
-    color: #000000;
-}
-
-
-input, select, textarea, button {
-    font-family: sans-serif;
-    font-size: 1em;
-    color: #000000;
-    border-radius: 5px;
-}
-
-
-.grupo:before, .grupo:after {
-    display: table;
-}
-
-
-.grupo:after {
-    clear: both;
-}
-
-
-.campo {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1em;
-    min-width: 40%;
-}
-#xp_campo {
-  width: 100%;
-}
-#xp_campo textarea {
-  width: 90%;
-}
-
-
-.campo label {
-    margin-bottom: 0.2em;
-    color: #000000;
-}
-
-
-fieldset.grupo {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+
 }
+fieldset{
+    border: 3px solid darkslateblue;
 
-
-.campo input[type="text"], .campo input[type="email"], .campo input[type="tel"], .campo select, .campo textarea {
-    padding: 0.2em;
-    border: 1px solid #000000;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
 }
-
-
-.campo select option {
-    padding-right: 1em;
+legend{
+    border: 1px solid darkslateblue;
+    padding: 10px;
+    text-align: center;
+    background-color: darkslateblue;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
+.inputBox{
+    position: relative;
 
-
-.campo input:focus, .campo select:focus, .campo textarea:focus {
-    background: rgb(67, 233, 205);
 }
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
 
-
-.botao-concluido {
-    font-size: 1.2em;
-    background: #000000;
-    border: 0;
-    margin-bottom: 1em;
-    color: #ffffff;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-    position: initial;
-    top: 90%;
-    left: 50%;
-    transform: translate(-0%, -0%)
 }
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
 
-
-.botao-concluido:hover {
-    background: rgb(67, 233, 205);
-    color: #000000;
-    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: none;
 }
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput{
+    top: -20px;
+    font-size: 12px;
+    color: darkslateblue;
 
+}
+#data_nascimento, #etnia, #formação_acadêmica, #checkBox{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
 
-.botao-concluido, select{
+}
+#submit_1{
+    background-image: linear-gradient(to right,rgb(12, 54, 201), rgb(90, 20, 220));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
     cursor: pointer;
+    border-radius: 10px;
 }
 
-#dNascimento {
-    padding: 0.2em;
-    border: 1px solid #000000;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+#submit_1:hover{
+    background-image: linear-gradient(to right,rgb(0, 75, 180), rgb(80, 25, 190));
 }
 
-legend {
-    padding: 0.2em;
-    border: 1px groove #000000;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    display: block; 
+#submit_2{
+    background-image: linear-gradient(to right,rgb(12, 54, 201), rgb(90, 20, 220));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
 }
 
-.botao-voltar{
-    font-size: 1.2em;
-    background: #000000;
-    border: 0;
-    margin-bottom: 1em;
-    color: #ffffff;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-    margin: 1%;
-    top: 1%;
-    left: 1%;
-    transform: translate(-0%, -0%)
+#submit_2:hover{
+    background-image: linear-gradient(to right,rgb(0, 75, 180), rgb(80, 25, 190));
+}
+
+:focus::placeholder {
+    transition: all 0.2s ease-out;
+    color:white;
+    opacity: 1;
+}
+
+
+::placeholder {
+    color: transparent;
+    opacity: 0;
+}
+
+textarea{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    max-width: 325px;
+    overflow-y: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.inputBox textarea:focus::placeholder {
+    transition: all 0.2s ease-out;
+    color: #000000;
+    opacity: 1;
     
   }
-
-.botao-voltar:hover {
-    background: rgb(67, 233, 205);
-    color: #000000;
-    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: none;
+.inputBox textarea::placeholder {
+    color: transparent;
+    opacity: 1;
+    
 }
-
-.botao-voltar, select{
-    cursor: pointer;
-}
-
 
