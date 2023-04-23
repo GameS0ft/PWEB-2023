@@ -30,7 +30,7 @@ body {
 }
 
 #placeholder {
-  grid-column: 2 / span 3;
+  grid-column: 2 / -1;
   grid-row: 2;
 }
 .button {

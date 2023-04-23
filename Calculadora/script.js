@@ -9,39 +9,41 @@ let buttons;
 
 //numberMap maps the button id to its calculation value
 const numberMap = {
-  "zero": "0",
-  "one": "1",
-  "two": "2",
-  "three": "3",
-  "four": "4",
-  "five": "5",
-  "six": "6",
-  "seven": "7",
-  "eight": "8",
-  "nine": "9",
-  "decimal": ".",
+  zero: "0",
+  one: "1",
+  two: "2",
+  three: "3",
+  four: "4",
+  five: "5",
+  six: "6",
+  seven: "7",
+  eight: "8",
+  nine: "9",
+  decimal: "."
 };
-
 //operatorMap maps the button id to its calculation value
 //DO NOT change this since it'll break the stuff, literal values of
 //this are used to improve the consiceness
 const operatorMap = {
-  "add": "+",
-  "subtract": "-",
-  "multiply": "*",
-  "divide": "/"
-};
+  add: "+",
+  subtract: "-",
+  multiply: "*",
+  divide: "/",
+  // exponent: "^",
+  // radical: "√"
+}
+
+//Arithmetic functions that will be chosen through the indexing techiniques
+const operatorDef = {
+  "+": [addition, 1],  //function to call and the priority
+  "-": [subtraction, 1],
+  "*": [multiplication, 2],
+  "/": [division, 2],
+  // "^": [exponentiation, 3],
+  // "√": [radication, 3],
+}
 
 const buttonMap = { ...numberMap, ...operatorMap };
-
-
-//Arithmetic functions that will be chosen through the indexing techiniques (operatorMap)
-const methods = [
-  sum,
-  sum, //a subtraction is basically a sum
-  multiply,
-  divide
-];
 
 //total is calculated every time the user inputs an operator
 let total = 0;
@@ -130,14 +132,6 @@ function pushOperation(op) {
     return;
   }
 
-  //all subtractions are also sums with negative number.
-  if (last(buffer) == operatorMap['subtract']) {
-    buffer[buffer.length - 1] = operatorMap['add'];
-    stringBuffer = operatorMap['subtract'] + stringBuffer;
-  }
-
-  //prepares the buffer to parsing, replacing characters.
-
   buffer.push(parseFloat(stringBuffer));
   buffer.push(op);
   buffer = resolve(buffer);
@@ -158,16 +152,14 @@ function resolve(buf) {
   const num2 = buf[2];
   const op2 = buf[3];
 
-  const index = Object.values(operatorMap).indexOf(op1);
-  //rule for resolving mutiply and division first
-  if (index <= 1 &&
-    Object.values(operatorMap).indexOf(op2) > 1)
+  const op1Def = operatorDef[op1];
+  const op2Def = operatorDef[op2];
+
+  //rule for it doesn't resolve an operation before another with higher priority
+  if (op1Def[1] < op2Def[1])
     return buf;
 
-  if (index < 0)
-    return buf;
-
-  const result = methods[index](num1, num2);
+  const result = op1Def[0](num1, num2);
   buf = [result, op2];
   return buf;
 
@@ -190,22 +182,24 @@ function showResult() {
   display.innerText = showOnDisplay(total.toString())
 }
 
-function last(list) {
-  return list[list.length - 1];
-}
 
-
-function sum(num1, num2) {
+function addition(num1, num2) {
   return num1 + num2;
 }
-function multiply(num1, num2) {
+function subtraction(num1, num2) {
+  return addition(num1, -num2);
+}
+function multiplication(num1, num2) {
   return num1 * num2;
 }
-function divide(num1, num2) {
+function division(num1, num2) {
   if (num2 == 0)
     return num1;
   return num1 / num2;
 }
-
-
-
+// function exponentiation(num1, num2) {
+//   return Math.pow(num1, num2);
+// }
+// function radication(num1, num2) {
+//   return Math.pow(num2, division(1, num1));
+// }
