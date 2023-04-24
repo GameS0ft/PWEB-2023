@@ -7,3 +7,9 @@ input{
     padding: 20px;
     border-radius: 36px;
 }
+#voltar{
+    padding:10px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+  }
