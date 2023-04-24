@@ -8,8 +8,14 @@ input{
     border-radius: 36px;
 }
 #voltar{
-    padding:10px;
+    padding:15px;
     position: fixed;
     top: 10px;
     left: 10px;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(46, 145, 226);
+    border-radius: 50px;
+    color:white;
+    font-size: large;
   }
