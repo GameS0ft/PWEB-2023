@@ -23,15 +23,14 @@ fieldset{
 
 }
 legend{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid darkslateblue;
     padding: 10px;
     text-align: center;
     background-color: darkslateblue;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    border-radius: 8px; 
 }
 .inputBox{
     position: relative;
