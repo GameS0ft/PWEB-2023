@@ -95,9 +95,10 @@ section:nth-child(even){
     background: #59429d;
 }
 
-.cabecalho .logo{
+.cabecalho .logo, button{
     font-size: 2.5rem;
     color: var(--black);
+    background-color: transparent;
 }
 
 .cabecalho .logo i{
@@ -265,40 +266,4 @@ section:nth-child(even){
 
 .rodape .fim span{
     color:var(--blue);
-}
-
-.btn-voltar{
-    display: inline-block;
-    margin-top: 1rem;
-    padding: .5rem;
-    padding-right: 1rem;
-    border:var(--border);
-    border-radius: .5rem;
-    box-shadow: var(--box-shadow);
-    color:var(--blue);
-    cursor: pointer;
-    font-size: 1.7rem;
-    background: #fff;
-    top: 1%;
-    left: 1%;
-    position: fixed;
-}
-
-.btn-voltar span{
-    padding:.7rem 1rem;
-    border-radius: .5rem;
-    background: var(--blue);
-    color:#fff;
-    margin-right: .5rem;
-}
-
-.btn-voltar:hover{
-    background: var(--blue);
-    color:#fff;
-}
-
-.btn-voltar:hover span{
-    color: var(--blue);
-    background:#fff;
-    margin-right: 1rem;
 }
