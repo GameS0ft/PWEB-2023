@@ -186,6 +186,11 @@
   }
 
   #voltar{
+    font-size: large;
+    border:none;
+    background-color: white;
+    margin-top: 5px;
+    margin-left: 5px;
     padding:10px;
     /* position: relative; */
     top: 10px;
