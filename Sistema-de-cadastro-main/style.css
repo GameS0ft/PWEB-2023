@@ -1,6 +1,13 @@
 main{
     padding-top:30px;
 }
+body {
+    background-image: url("imagens/folha.avif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 50%;
+}
 #voltar{
     padding:10px;
     position: fixed;
