@@ -27,3 +27,7 @@ input{
     color: white;
     border:none;
 }
+footer{
+    text-align: left;
+    bottom: 0px;
+}
