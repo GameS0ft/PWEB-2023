@@ -209,6 +209,7 @@ a:hover
 }
 .checkbox .trace
 {
+    margin-right: 3rem;
     width: 3.5vw;
     height: 0.17vw;
     background-color: #1e1e2a;
