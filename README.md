@@ -11,6 +11,8 @@ Websites criados pela equipe Gamesoft para a disciplina de Programação Web
 ###### Carlos Abimael
 ###### Isaac Mota
 
+#### -----
+
 ###### Linguagens de marcação de texto: HTML; CSS.
 ###### Linguagens de Programação utilizadas: JavaScript.
 ###### Ferramentas/Frameworks: Bootstrap.
