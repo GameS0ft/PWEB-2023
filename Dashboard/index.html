@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard de Notas de Matheus Cristian</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar navbar-default"> 
+        <button id="voltar" onclick="history.back()"> VOLTAR</button>
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#" style="cursor:default; color:black;">
+                    Suas notas  
+                </a>
+                <div class="pull-right navbar-right">
+                    <p class="navbar-text">
+                      user_001_matheus <i class="material-icons">account_circle</i>
+                    </p>
+                </div>                  
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Notas</div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Disciplina</th>
+                                        <th>Nota</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="gradesTableBody">
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Informações sobre o usuário</div>
+                            <div class="panel-body">
+                            <div class="panel-body">
+                                <br>
+                                <div style="display: flex; align-items: center;">
+                                    <h4 style="margin-right: 10px;">Matheus Cristian</h4>
+                                    <i class="material-icons" style="font-size: 38px;">account_circle</i>
+                                </div>
+                                <br>
+                                <br>
+                                <h4>Disciplinas que está cursando:</h4>
+                                <p>Matemática; Português; História; Geografia; Ciências.</p>
+                                <br>
+                                <h4>Disciplinas que mais gosta:</h4>
+                                <ul>
+                                <li>Matemática</li>
+                                <li>História</li>
+                                <li>Geografia</li>
+                                </ul>
+                                <br>
+                                <h4>Atividades para fazer:</h4>
+                                <ul>
+                                <li>Website de PWEB</li>
+                                <li>Atividade de Implementação de Sistemas</li>
+                                </ul>
+                                
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                                </table>
+                               </div>
+                               
+                            </div>
+                           </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Gráfico de Barras</div>
+                            <canvas id="gradesChart"></canvas>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Gráfico de Pizza</div>
+                            <canvas id="gradesPieChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
