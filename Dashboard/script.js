@@ -98,32 +98,5 @@ grades.forEach((grade, index) => {
     }
    });
 
-   /* function updateSummary() {
-    let averageElement = document.querySelector('#average');
-    let average = grades.reduce((acc, grade) => acc + grade.grade, 0) / grades.length;
-    averageElement.innerText = average.toFixed(1);
-   }
-   
-   updateSummary();
-   
-   let summaryTableBody = document.querySelector('.panel-body tbody');
-   grades.forEach(grade => {
-   let row = document.createElement('tr');
-   row.innerHTML = `<td>${grade.subject}</td><td>${grade.grade}</td>`;
-   summaryTableBody.appendChild(row);
-   });
 
-   gradeCell.addEventListener('click', () => {
-    let newGrade = prompt(`Insira uma nova nota para ${grade.subject}:`);
-    if (newGrade !== null && !isNaN(newGrade)) {
-    newGrade = Number(newGrade);
-    grades[index].grade = newGrade;
-    gradeCell.textContent = newGrade;
-    gradesChart.data.datasets[0].data[index] = newGrade;
-    gradesChart.update();
-    gradesPieChart.data.datasets[0].data[index] = newGrade;
-    gradesPieChart.update();
-    updateSummary();
-    }
-   }); */
    
