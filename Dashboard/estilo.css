@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+body {
+    font-family: 'Pacifico', cursive;
+    
+}
+.container{
+    scale:0.9;
+}
+.main{
+    padding:80px;
+    padding-bottom:150px;
+    background-image: url("bg.jpg");
+    width:100%;
+    height:auto;
+    background-size: 100% 100%;
+}
+.panel {
+    background-color: lightgreen;
+}
+
+
+.container {
+    margin-top: 20px;
+}
+.panel {
+    border-radius: 35px;
+}
+.panel-heading {
+    font-size: 24px;
+    background-color: #ffffff;
+    color: black;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+th {
+    background-color: #af8f53;
+    color: rgb(255, 255, 255);
+}
+tr:nth-child(even) {
+    background-color: #ffffff;
+}
+.navbar-brand {
+    font-size: 24px;
+}
+.navbar-default {
+    background-color: rgba(0,0,0,.0);
+    border:none;
+}
+nav.navbar .navbar-text {
+    color: black;
+}
+nav.navbar .navbar-brand {
+    color: black;
+}
+.navbar-header .pull-right {
+    position: absolute;
+    right: 15px;
+}
+
+
+
+#voltar{
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: pink;
+}
+
+.btn-link:focus,.btn-link:active,.btn-link:active:focus {
+    outline: none;
+    box-shadow: none;
+
+}
+.panel-body table th,.panel-body table td {
+text-align: center;
+}
+.panel-body table th {
+background-color: #9c7b3d;
+color: white;
+}
+.panel-body table tr:nth-child(even) {
+background-color: #f2f2f2;
+}
