@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    border: 2px solid #fff;
+    padding: 30px 40px;
+    width:50%;
+    margin-top: 7em;
+}
+
+legend{
+    color: white;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.mb-3{
+    position: relative;
+}
+
+.form-control, .form-label, .card-body{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: black;
+    font-size: 15px;
+    width: 100%;
+}
+
+#id, #descricao, #executor, #prazo, #status{
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+.container{
+    width:50%;
+    margin-top: 7em;
+}
+@media screen and (max-width: 800px) {
+    .container{
+        width:70%;
+    }
+  }
+@media screen and (max-width: 650px) {
+    .container{
+        width:80%;
+    }
+  }
+@media screen and (max-width: 500px) {
+    .container{
+        width:99%;
+        margin-top: 5em;
+    }
+  }
+

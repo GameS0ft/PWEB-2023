@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="icon" type="image/x-icon" href="imagens/GameSoft.ico">
+    <link rel="stylesheet" href="css/ToDoList.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <main class="container">
+        <legend><b>To Do List</b></legend>
+        <div class="card mt-5">
+            <div class="card-body">
+                <input type="hidden" id="id">
+                <div class="mb-3">
+                    <label for="descricao" class="form-label">Descrição</label>
+                    <input type="text" class="form-control" id="descricao" placeholder="Qual tarefa você vai fazer ?">
+                </div>
+                <div class="mb-3">
+                    <label for="executor" class="form-label">Executor</label>
+                    <input type="text" class="form-control" id="executor" placeholder="Quem é o responsável pela tarefa ?">
+                </div>
+                <div class="mb-3">
+                    <label for="prazo" class="form-label">Prazo</label>
+                    <input type="date" class="form-control" id="prazo">
+                </div>
+                <div class="mb-3">
+                    <label for="prazo" class="form-label">Status</label>
+                    <select class="form-select" id="status">
+                        <option value="">Selecione</option>
+                        <option value="Pendente">Pendente</option>
+                        <option value="Fazendo">Fazendo</option>
+                        <option value="Feita">Feita</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <a class="btn btn-primary" id="addToDo" onclick="adicionarTarefa()">Adicionar Tarefa</a>
+                </div>
+            </div>
+        </div>
+        <div class="card mt-5">
+            <div class="card-body">
+                <h5>Tarefas à Fazer</h5>
+                <table class="table" id="tabelaTarefas">
+                    <thead>
+                        <tr>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Executor</th>
+                            <th scope="col">Prazo</th>
+                            <th scope="col">Status</th>
+                            <th scope="col" class="text-center">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaTarefasBody">
+                    </tbody>
+                </table>
+            </div>
+            <!-- <div class="card-body">
+                <h5>Tarefas em Execução</h5>
+                <table class="table" id="tabelaTarefas">
+                    <thead>
+                        <tr>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Executor</th>
+                            <th scope="col">Prazo</th>
+                            <th scope="col">Status</th>
+                            <th scope="col" class="text-center">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaTarefasBody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-body">
+                <h5>Tarefas Concluídas</h5>
+                <table class="table" id="tabelaTarefas">
+                    <thead>
+                        <tr>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Executor</th>
+                            <th scope="col">Prazo</th>
+                            <th scope="col">Status</th>
+                            <th scope="col" class="text-center">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaTarefasBody">
+                    </tbody>
+                </table>
+            </div> -->
+        </div>
+    </main>
+
+
+    <script src="./js/ToDoList.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
