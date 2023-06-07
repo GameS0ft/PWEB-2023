@@ -8,13 +8,44 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: black;
 }
-.body
+
+html,body{
+  height: 100%;
+}
+
+.sidebar
 {
+  float: left;
+  padding: 10px 10px;
+  width: 250px;
+  height: 100%;
+  overflow-y: auto;
   background-color: black;
+  overflow-x: hidden;
 }
-h1
+
+.sidebar-wrapper
 {
- color: white;
+  padding-bottom: 200px;
+}
+
+.sidebar_menu
+{
+  margin: 20px;
+  color: rgb(190,190,190);
+}
+
+.sidebar_logo img
+{
+  max-width: 250px;
+  width: 100%;
+}
+
+.sidebar_menu a
+{
+  color: rgb(190,190,190);
+  text-decoration: none;
+  display: block;
+  padding: 10px;
 }
