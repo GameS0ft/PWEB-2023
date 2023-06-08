@@ -49,3 +49,27 @@ html,body{
   display: block;
   padding: 10px 0;
 }
+
+.sidebar_menu svg
+{
+  margin: 0 20px;
+}
+.sidebar_menu a.sidebar_menu_selecionado
+{
+  color: white;
+  background-color: rgb(80,80,80);
+  border-radius: 5px;
+}
+
+.sidebar_menu_item img
+{
+ max-width: 2rem;
+ width: 100%;
+}
+
+.sidebar_menu_item
+{
+  margin-top: 12px;
+  cursor: pointer;
+  vertical-align: middle;
+}
