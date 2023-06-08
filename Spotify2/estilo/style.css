@@ -32,7 +32,7 @@ html,body{
 
 .sidebar_menu
 {
-  margin: 20px;
+  margin: 20px 0;
   color: rgb(190,190,190);
 }
 
@@ -47,5 +47,5 @@ html,body{
   color: rgb(190,190,190);
   text-decoration: none;
   display: block;
-  padding: 10px;
+  padding: 10px 0;
 }
