@@ -1,104 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>To Do List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link href="css/ToDoList.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="imagens/GameSoft.ico">
-    <link rel="stylesheet" href="css/ToDoList.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
-
-<body>
-    <main class="container">
-        <legend><b>To Do List</b></legend>
-        <div class="card mt-5">
-            <div class="card-body">
-                <input type="hidden" id="id">
-                <div class="mb-3">
-                    <label for="descricao" class="form-label">Descrição</label>
-                    <input type="text" class="form-control" id="descricao" placeholder="Qual tarefa você vai fazer ?">
-                </div>
-                <div class="mb-3">
-                    <label for="executor" class="form-label">Executor</label>
-                    <input type="text" class="form-control" id="executor" placeholder="Quem é o responsável pela tarefa ?">
-                </div>
-                <div class="mb-3">
-                    <label for="prazo" class="form-label">Prazo</label>
-                    <input type="date" class="form-control" id="prazo">
-                </div>
-                <div class="mb-3">
-                    <label for="prazo" class="form-label">Status</label>
-                    <select class="form-select" id="status">
-                        <option value="">Selecione</option>
-                        <option value="Pendente">Pendente</option>
-                        <option value="Fazendo">Fazendo</option>
-                        <option value="Feita">Feita</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <a class="btn btn-primary" id="addToDo" onclick="adicionarTarefa()">Adicionar Tarefa</a>
-                </div>
+  <body>
+    
+    <div class="container">
+      <header>
+        <h1>Kanban<br/><span>To Do List</span></h1>
+      </header>
+      
+      <div class="add-task-container">
+        <input type="text" maxlength="12" id="taskText" placeholder="Nova Tarefa..." onkeydown="if (event.keyCode == 13)
+          document.getElementById('add').click()">
+        <button id="add" class="button add-button" onclick="addTask()">Adicionar Tarefa</button>
+      </div>
+      
+      <div class="main-container">
+        <ul class="columns">
+      
+          <li class="column to-do-column">
+            <div class="column-header">
+              <h4>Fazer</h4>
             </div>
-        </div>
-        <div class="card mt-5">
-            <div class="card-body">
-                <h5>Tarefas à Fazer</h5>
-                <table class="table" id="tabelaTarefas">
-                    <thead>
-                        <tr>
-                            <th scope="col">Descrição</th>
-                            <th scope="col">Executor</th>
-                            <th scope="col">Prazo</th>
-                            <th scope="col">Status</th>
-                            <th scope="col" class="text-center">Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tabelaTarefasBody">
-                    </tbody>
-                </table>
+            <ul class="task-list" id="to-do">
+              <li class="task">
+                <p>Pesquisar</p>
+              </li>
+              <li class="task">
+                <p>Codificação</p>
+              </li>
+              <li class="task">
+                <p>Estudar</p>
+              </li>
+              <li class="task">
+                <p>Medir</p>
+              </li>
+            </ul>
+          </li>
+      
+          <li class="column doing-column">
+            <div class="column-header">
+              <h4>Fazendo</h4>
             </div>
-            <!-- <div class="card-body">
-                <h5>Tarefas em Execução</h5>
-                <table class="table" id="tabelaTarefas">
-                    <thead>
-                        <tr>
-                            <th scope="col">Descrição</th>
-                            <th scope="col">Executor</th>
-                            <th scope="col">Prazo</th>
-                            <th scope="col">Status</th>
-                            <th scope="col" class="text-center">Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tabelaTarefasBody">
-                    </tbody>
-                </table>
+            <ul class="task-list" id="doing">
+              <li class="task">
+                <p>Jogar Basquete</p>
+              </li>
+              <li class="task">
+                <p>Testagem de Projetos</p>
+              </li>
+              <li class="task">
+                <p>Protótipo</p>
+              </li>
+            </ul>
+          </li>
+      
+          <li class="column done-column">
+            <div class="column-header">
+              <h4>Feito</h4>
             </div>
-            <div class="card-body">
-                <h5>Tarefas Concluídas</h5>
-                <table class="table" id="tabelaTarefas">
-                    <thead>
-                        <tr>
-                            <th scope="col">Descrição</th>
-                            <th scope="col">Executor</th>
-                            <th scope="col">Prazo</th>
-                            <th scope="col">Status</th>
-                            <th scope="col" class="text-center">Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tabelaTarefasBody">
-                    </tbody>
-                </table>
-            </div> -->
-        </div>
-    </main>
-
-
-    <script src="./js/ToDoList.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-</body>
-
+            <ul class="task-list" id="done">
+              <li class="task">
+                <p>Idealização</p>
+              </li>
+              <li class="task">
+                <p>Projetos PWEB</p>
+              </li>
+            </ul>
+          </li>
+      
+          <li class="column trash-column">
+            <div class="column-header">
+              <h4>Lixeira</h4>
+            </div>
+            <ul class="task-list" id="trash">
+              <li class="task">
+                <p>Prova de SOR2</p>
+              </li>
+              <li class="task">
+                <p>Caminhar</p>
+              </li>
+      
+            </ul>
+            <div class="column-button">
+              <button class="button delete-button" onclick="emptyTrash()">Deletar</button>
+            </div>
+          </li>
+      
+        </ul>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/dragula@3.7.2/dist/dragula.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
+    crossorigin="anonymous"></script>
+    <script src="js/ToDoList.js"></script>
+  </body>
 </html>
