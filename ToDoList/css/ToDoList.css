@@ -248,3 +248,21 @@ li {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
   filter: alpha(opacity=20);
 }
+
+.editing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  transition: all 0.3s;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: move;
+  text-align: center;
+  width: 6.25rem;
+  outline: none;
+}
+
+.no-outline {
+  outline: none;
+}

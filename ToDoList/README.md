@@ -21,11 +21,12 @@ Aqui estão alguns dos recursos do meu To Do List:
 - Cartões de Tarefas: Cada tarefa é representada por um cartão que contém informações. Os cartões podem ser movidos entre as colunas para indicar o progresso da tarefa.
 - Arrastar e soltar: As tarefas podem ser facilmente movidos entre as colunas através de uma interface de arrastar e soltar. Isso permite que você atualize o status das tarefas com facilidade.
 
-## Adicionar ou excluir dados
+## Adicionar, editar ou excluir dados
 
 1. Clique em "Nova Tarefa..." para aderir uma tarefa 
 2. Insira a nova tarefa e clique em "Adicionar Tarefa" ou tecle enter
 3. Pronto, agora a tarefa será alocada a coluna "Fazer" e pode ser movida conforme seu estado de execução para outras colunas ou pode ser deletada
+4. Ao clicar duas vezes em cima de qualquer tarefa a mesma poderá ser editada para correção ou modificação
 
 ## Contribuindo
 
