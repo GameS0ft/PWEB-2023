@@ -1,9 +1,9 @@
-# PWEB-N1
+# Projetos de Programação Web
 Websites criados pela equipe Gamesoft para a disciplina de Programação Web
 
-### Equipe desenvolvedora do projeto: Gamesoft
+## Equipe desenvolvedora do projeto: Gamesoft
 
-### Participantes:
+## Participantes:
 
 ###### Matheus Cristian
 ###### Davi Ribeiro
