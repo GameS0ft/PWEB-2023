@@ -28,11 +28,10 @@ Aqui estão algumas das tecnologias web que eu utilizamos neste projeto:
 
 - Dashboard
     ###### Recursos do Dashboard
-    ###### Aqui estão alguns dos recursos do meu dashboard:
 
-    ###### Gráfico de barras: exibe informações em formato de barras.
-    ###### Gráfico de pizza: exibe informações em formato de pizza.
-    ###### Tabela de notas: exibe as notas do aluno que fez login. Ao clicar no número da nota na tabela, você pode alterar esse número a partir de um alerta no navegador.
+    ###### - Gráfico de barras: exibe informações em formato de barras.
+    ###### - Gráfico de pizza: exibe informações em formato de pizza.
+    ###### - Tabela de notas: exibe as notas do aluno que fez login. Ao clicar no número da nota na tabela, você pode alterar esse número a partir de um alerta no navegador.
 
 ## Contribuindo
 
