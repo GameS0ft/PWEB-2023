@@ -33,6 +33,10 @@ Aqui estão algumas das tecnologias web que eu utilizamos neste projeto:
     ###### - Gráfico de pizza: exibe informações em formato de pizza.
     ###### - Tabela de notas: exibe as notas do aluno que fez login. Ao clicar no número da nota na tabela, você pode alterar esse número a partir de um alerta no navegador.
 
+- Sistema de cadastro
+
+- Página de login
+
 ## Contribuindo
 
 Se você gostaria de contribuir para este projeto, por favor siga estes passos:
