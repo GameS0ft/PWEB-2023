@@ -22,20 +22,22 @@ Aqui estão algumas das tecnologias web que eu utilizamos neste projeto:
 
 ## Projetos neste repositório
 
-- Quiz sobre programação
+- Quiz sobre programação 📑
     ###### Neste quiz, há 3 perguntas sobre linguagens de programação, mostrando ao usuário quando ele erra e acerta a resposta, e mostrando ao usuário a pontuação dele ao final, podendo ele recomeçar o quiz.
     ######
 
-- Dashboard
+- Dashboard 📊
     ###### Recursos do Dashboard
 
     ###### - Gráfico de barras: exibe informações em formato de barras.
     ###### - Gráfico de pizza: exibe informações em formato de pizza.
     ###### - Tabela de notas: exibe as notas do aluno que fez login. Ao clicar no número da nota na tabela, você pode alterar esse número a partir de um alerta no navegador.
 
-- Sistema de cadastro
+- Sistema de cadastro 🪪
+    ###### Permite que o usuário se cadastre no website, para fazer login após se cadastrar comum nome de usuário e senha.
 
-- Página de login
+- Página de login 💻
+    ###### O login é feito com o nome de usuário e com a senha que foi escolhida.
 
 ## Contribuindo
 
