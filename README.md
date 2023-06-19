@@ -5,7 +5,7 @@ Websites criados pela equipe Gamesoft para a disciplina de Programação Web
 
 ## Participantes:
 
-###### Matheus Cristian
+###### Matheus Cristian | Github: matheus-cristian
 ###### Davi Ribeiro
 ###### Abraão Rodrigues
 ###### Carlos Abimael
