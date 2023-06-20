@@ -377,6 +377,12 @@ a:hover
     background-image: url("../imagens/calculadora.png");
 }
 
+.card-container:nth-child(8) .card
+{
+    background-image: url("../imagens/ToDoList.png");
+}
+
+
 
 .card-text
 {
