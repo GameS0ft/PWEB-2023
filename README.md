@@ -6,10 +6,10 @@ Websites criados pela equipe Gamesoft para a disciplina de Programação Web
 ## Participantes:
 
 ###### Matheus Cristian | Github: matheus-cristian
-###### Davi Ribeiro
-###### Abraão Rodrigues
-###### Carlos Abimael
-###### Isaac Mota
+###### Davi Ribeiro     | Github: Markus328
+###### Abraão Rodrigues | Github: AbraaoLima
+###### Carlos Abimael   | Github: abimaelProgammer
+###### Isaac Mota       | Github: IsaacMotaB
 
 ## Tecnologias Utilizadas
 
@@ -38,6 +38,19 @@ Aqui estão algumas das tecnologias web que eu utilizamos neste projeto:
 
 - Página de login 💻
     ###### O login é feito com o nome de usuário e com a senha que foi escolhida.
+
+- To Do List 📝
+    ###### Recursos do To Do List
+
+    ###### -  Quadro Kanban: exibe a divisão em colunas que representam os estágios do fluxo de trefas, como "Fazer", "Fazendo" e "Feito", existe também um coluna "Lixeira" para deletar tarefas.
+    ###### - Cartões de Tarefas: Cada tarefa é representada por um cartão que contém informações. Os cartões podem ser movidos entre as colunas para indicar o progresso da tarefa.
+    ###### - Arrastar e soltar: As tarefas podem ser facilmente movidos entre as colunas através de uma interface de arrastar e soltar. Isso permite que você atualize o status das tarefas com facilidade.
+
+- Página de formulário 📋
+    ###### Esse formulário utiliza a coletar informações dos usuários de um website, permitindo que os visitantes insiram dados como nomes, endereços de e-mail, números de telefone, comentários e outros tipos de informações relevantes.
+
+- Homepage 🌐
+    ###### O Homepage fornece uma introdução e um ponto de entrada para o site da web, oferecendo  informações básicas sobre o site e navegação para outras seções.           
 
 ## Contribuindo
 
