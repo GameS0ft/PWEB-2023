@@ -382,6 +382,11 @@ a:hover
     background-image: url("../imagens/ToDoList.png");
 }
 
+.card-container:nth-child(9) .card
+{
+    background-image: url("../imagens/dashboard.png");
+}
+
 
 
 .card-text
