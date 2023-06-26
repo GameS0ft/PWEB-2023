@@ -1,0 +1,92 @@
+body {
+    background-image: url(../imagens/blunder_background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    color: rgb(232, 243, 137);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.2);
+    cursor: default;
+    margin-bottom: 2em;
+}
+
+h1 {
+    font-size: 5em;
+    font-weight: 900;
+}
+
+p {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-wrapper button {
+    margin: 0 0.5em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-wrapper button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(143, 202, 74, 0.6);
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 4px 10px rgba(143, 202, 74, 0.6);
+    }
+    to {
+        box-shadow: 0 4px 20px rgba(143, 202, 74, 0.8);
+    }
+}
+
+button.btn-primary.rounded-pill {
+    background-color: #8FCA4A;
+    border-color: #8FCA4A;
+    color: rgb(243, 250, 181);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button.btn-primary.rounded-pill:hover {
+    background-color: #8FCA4A;
+    border-color: #8FCA4A;
+    color: rgb(243, 250, 181);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button.btn-primary.rounded-pill:focus, button.btn-primary.rounded-pill:active {
+    background-color: #8FCA4A !important;
+    border-color: #8FCA4A !important;
+    color: rgb(243, 250, 181) !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    outline: none !important;
+}
+
+button.btn-primary.rounded-pill:focus,
+button.btn-primary.rounded-pill:active,
+button.btn-outline-primary.rounded-pill:focus,
+button.btn-outline-primary.rounded-pill:active {
+    box-shadow: 0 0 0 0.2rem rgba(143, 202, 74, 0.5) !important;
+    outline: none !important;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Eventos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos/style.css">
+    <script src="scripts/temporizador.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="imagens/GameSoft.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="imagem">
+                <img id="logo" src="imagens/white_lichess.png" alt="logo da gamesoft" height="52" width="128">
+            </div>
+            <nav>
+                <ul>
+                    <li><a id="home" href="#">HOME</a></li>
+                    <li><a href="errorPage.html">ORGANIZADORES</a></li>
+                    <li><a href="errorPage.html">REGULAMENTO</a></li>
+                    <li><a href="errorPage.html">PROGRAMAÇÃO</a></li>
+                    <li><a href="errorPage.html">CONTATO</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="countdown-container">
+                <div class="countdown row" id="countdown">
+                  <div class="col-3 countdown-item">
+                    <span id="days">00</span>
+                    <p id="dias">Dias</p>
+                  </div>
+                  <div class="col-3 countdown-item">
+                    <span id="hours">00</span>
+                    <p id="horas">Horas</p>
+                  </div>
+                  <div class="col-3 countdown-item">
+                    <span id="minutes">00</span>
+                    <p id="minutos">Minutos</p>
+                  </div>
+                  <div class="col-3 countdown-item">
+                    <span id="seconds">00</span>
+                    <p id="segundos">Segundos</p>
+                  </div>
+                </div>
+              </section>
+            <section class="event-description">
+                <h1>TORNEIO CEARENSE DE XADREZ ONLINE</h1>
+                <P>LICHESS.ORG, 01-02 JULHO, 2023</P>
+            </section>
+            <section class="call-to-action">
+                <div class="button-wrapper">
+                  <button type="button" onclick="window.location.href = 'errorPage.html'" class="btn btn-primary rounded-pill mr-2">INSCREVA-SE</button>
+                  <button type="button" onclick="window.location.href = 'errorPage.html'" class="btn btn-outline-primary rounded-pill">SAIBA MAIS</button>
+                </div>  
+            </section>  
+        </main>
+        <footer>
+            <p>Oficialmente reconhecido e patrocinado pela FCX</p>
+            <p>&copy; 2023 Torneio Cearense de Xadrez Online. Todos os direitos reservados.</p>
+        </footer>
+    </div>    
+</body>
+</html>
