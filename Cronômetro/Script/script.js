@@ -52,29 +52,28 @@ function returnData(input) {
   return input > 10 ? input : `0${input}`
 }
 
-b=true;
-function tema()
+
+function Tema()
 {
-   
-    document.getElementById('nome').innerText = escuro(b);
-    
-}
-function escuro(b) 
-{
-    switch(b)
+
+  
+  tema = document.getElementById('tema').innerText;
+  switch(tema)
+  {
+    case 'Claro': 
     {
-        case true: 
-        {
-            a = 'Escuro'
-            b=!b;
-        } 
-        break;
-        case false: 
-        {
-            a = 'Claro'
-            b=!b;
-        }
-        break
+      document.getElementById('tema').innerText = 'Escuro';
+      var estilo = document.getElementById('estilo');
+      estilo.setAttribute("href", "Style/Claro.css");
+      break;
     }
-    return b;
-}
+    case 'Escuro':
+      {
+        document.getElementById('tema').innerText = 'Claro';
+        var estilo = document.getElementById('estilo');
+        estilo.setAttribute("href", "Style/Escuro.css");
+        break;
+      }
+  }
+} 
+
