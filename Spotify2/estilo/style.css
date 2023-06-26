@@ -285,8 +285,25 @@ main
   position: absolute;
   left: 0;
   top: 0;
-  width: 80%;
+  width: 0%;
   height: 7px !important;
   border-radius: 8px;
   background-color: white;
+ }
+ @media screen and (max-width: 1700px) 
+ {
+  .main-col
+  {
+    width: 20%;
+  }
+     
+ }
+
+ @media screen and (max-width: 768px) 
+ {
+  .main-col
+  {
+    width: 50%;
+  }
+     
  }
