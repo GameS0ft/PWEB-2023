@@ -182,7 +182,7 @@ h2
   visibility: visible;
 }
 
-a:hover
+.social-media a:hover
 {
     background-color: white;
 }
@@ -387,6 +387,10 @@ a:hover
     background-image: url("../imagens/dashboard.png");
 }
 
+.card-container:nth-child(10) .card
+{
+    background-image: url("../imagens/pagina-de-eventos.png");
+}
 
 
 .card-text
