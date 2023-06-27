@@ -1,6 +1,2 @@
 # Formulário
-Aprenda como criar um simples e elegante formulário com HTML e CSS
-<br>
-<img src="https://1.bp.blogspot.com/-iem9LTDllYY/YKlwoY0uYYI/AAAAAAAAApo/9UUjW80biw4Ca-c0WWDkVFqC14OGh-pOQCLcBGAsYHQ/s320/formulario-html-css.png">
-<br>
-Temos uma aula no YouTube: https://www.youtube.com/watch?v=VCsNIRXNsmY
+Esse formulário utiliza a coletar informações dos usuários de um website, permitindo que os visitantes insiram dados como nomes, endereços de e-mail, números de telefone, comentários e outros tipos de informações relevantes.
