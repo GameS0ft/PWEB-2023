@@ -22,6 +22,9 @@ Aqui estão algumas das tecnologias web que eu utilizamos neste projeto:
 
 ## Projetos neste repositório
 
+- Portfólio 💼
+    ###### Esse portfólio exibe um conjunto de páginas web criadas pela esquipe GameSoft. Isso inclui uma navegação clara e intuitiva, layout responsivo que se adapta a diferentes dispositivos e tamanhos de tela, e uma organização das informações de cada projeto para que os visitantes possam encontrar facilmente o que estão procurando, usando animações sutis, transições suaves e elementos visuais atraentes para destacar o trabalho apresentado.
+
 - Quiz sobre programação 📑
     ###### Neste quiz, há 3 perguntas sobre linguagens de programação, mostrando ao usuário quando ele erra e acerta a resposta, e mostrando ao usuário a pontuação dele ao final, podendo ele recomeçar o quiz.
     ######
@@ -50,7 +53,29 @@ Aqui estão algumas das tecnologias web que eu utilizamos neste projeto:
     ###### Esse formulário utiliza a coletar informações dos usuários de um website, permitindo que os visitantes insiram dados como nomes, endereços de e-mail, números de telefone, comentários e outros tipos de informações relevantes.
 
 - Homepage 🌐
-    ###### O Homepage fornece uma introdução e um ponto de entrada para o site da web, oferecendo  informações básicas sobre o site e navegação para outras seções.           
+    ###### O Homepage fornece uma introdução e um ponto de entrada para o site da web, oferecendo  informações básicas sobre o site e navegação para outras seções.
+
+- Calculadora 🔢
+    ###### Essa calculadora é uma aplicação web interativa que permite aos usuários realizar operações matemáticas básicas, como adição, subtração, multiplicação e divisão, diretamente em um navegador da web.
+
+- Cronômetro ⏱
+    ###### O cronômetro e utilizado para medir o tempo decorrido entre eventos ou para rastrear a duração de uma atividade.
+
+- Landing Page 🖥️
+    ###### Esse Landing Page é projetada para direcionar a atenção dos visitantes para a página de um jogo, transmitindo a mensagem de forma clara e persuasiva em relação ao jogo oferecido.
+
+- Página de Evento 📅
+    ###### Uma página de evento com temporizador até a data de início do evento, que no caso seria um torneio cearense de xadrez online.
+
+- Página de Notícias 📰
+    ###### Recursos da Página de Notícias
+
+    ###### - Layout simples e responsivo: Exibe um design limpo, organizado e descomplicado e também se adapta e reorganiza automaticamente em diferentes tamanhos de tela e dispositivos, oferecendo uma experiência consistente e otimizada. 
+    ###### - Modo Escuro: um esquema de cores que utiliza um fundo escuro e cores claras para proporcionar uma experiência de visualização mais confortável
+    ###### - Categoria de notícias e notícias gerais : os leitores podem escolher conforme sua vontade a categoria de notícia nacionais que deseja ter mais informações ou pode optar por notícias de outros países.
+
+- Clone do Spotify 🎧
+    ###### Esse clone é uma recriação visual do famoso aplicativo de streaming de música Spotify, com um design limpo e elegante.                                 
 
 ## Contribuindo
 
