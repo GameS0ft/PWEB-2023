@@ -13,7 +13,7 @@ Websites criados pela equipe Gamesoft para a disciplina de Programação Web
 
 ## Tecnologias Utilizadas
 
-Aqui estão algumas das tecnologias web que eu utilizamos neste projeto:
+Aqui estão algumas das tecnologias web que nós utilizamos neste projeto:
 
 ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3)
@@ -37,7 +37,7 @@ Aqui estão algumas das tecnologias web que eu utilizamos neste projeto:
     ###### - Tabela de notas: exibe as notas do aluno que fez login. Ao clicar no número da nota na tabela, você pode alterar esse número a partir de um alerta no navegador.
 
 - Sistema de cadastro 🪪
-    ###### Permite que o usuário se cadastre no website, para fazer login após se cadastrar comum nome de usuário e senha.
+    ###### Permite que o usuário se cadastre no website, para fazer login após se cadastrar com um nome de usuário e senha.
 
 - Página de login 💻
     ###### O login é feito com o nome de usuário e com a senha que foi escolhida.
@@ -59,7 +59,7 @@ Aqui estão algumas das tecnologias web que eu utilizamos neste projeto:
     ###### Essa calculadora é uma aplicação web interativa que permite aos usuários realizar operações matemáticas básicas, como adição, subtração, multiplicação e divisão, diretamente em um navegador da web.
 
 - Cronômetro ⏱
-    ###### O cronômetro e utilizado para medir o tempo decorrido entre eventos ou para rastrear a duração de uma atividade.
+    ###### O cronômetro é utilizado para medir o tempo decorrido entre eventos ou para rastrear a duração de uma atividade.
 
 - Landing Page 🖥️
     ###### Esse Landing Page é projetada para direcionar a atenção dos visitantes para a página de um jogo, transmitindo a mensagem de forma clara e persuasiva em relação ao jogo oferecido.
