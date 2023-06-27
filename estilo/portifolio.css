@@ -392,6 +392,15 @@ h2
     background-image: url("../imagens/pagina-de-eventos.png");
 }
 
+.card-container:nth-child(11) .card
+{
+    background-image: url("../imagens/Spotify2.png");
+}
+
+.card-container:nth-child(12) .card
+{
+    background-image: url("../imagens/cronometro.png");
+}
 
 .card-text
 {
