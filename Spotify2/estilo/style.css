@@ -325,9 +325,18 @@ main
 
  @media screen and (max-width: 768px) 
  {
+  main
+  {
+    width: 100%;
+  }
+  .sidebar
+  {
+    display: none;
+  }
   .main-col
   {
-    width: 50%;
+    width: 48%;
+    margin-right: 2%;
   }
      
  }
