@@ -27,7 +27,6 @@ Aqui estão algumas das tecnologias web que nós utilizamos neste projeto:
 
 - Quiz sobre programação 📑
     ###### Neste quiz, há 3 perguntas sobre linguagens de programação, mostrando ao usuário quando ele erra e acerta a resposta, e mostrando ao usuário a pontuação dele ao final, podendo ele recomeçar o quiz.
-    ######
 
 - Dashboard 📊
     ###### Recursos do Dashboard
