@@ -401,6 +401,10 @@ h2
 {
     background-image: url("../imagens/cronometro.png");
 }
+.card-container:nth-child(13) .card
+{
+    background-image: url("../imagens/pagina-noticias.png");
+}
 
 .card-text
 {
