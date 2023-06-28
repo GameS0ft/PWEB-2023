@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -8,63 +8,37 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <link href="style.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Navigation Bar -->
-  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
-  <!--   <a class="navbar-brand" href="#">News</a> -->
-  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarnav" aria-controls="navbarnav" -->
-  <!--   aria-expanded="false" aria-label="toggle navigation"> -->
-  <!--   <span class="navbar-toggler-icon"></span> -->
-  <!-- </button> -->
-  <!--   <div class="collapse navbar-collapse" id="navbarNav"> -->
-  <!--     <ul class="navbar-nav"> -->
-  <!--       <li class="nav-item active"> -->
-  <!--         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
-  <!--       </li> -->
-  <!--       <li class="nav-item"> -->
-  <!--         <a class="nav-link" href="#">World</a> -->
-  <!--       </li> -->
-  <!--       <li class="nav-item"> -->
-  <!--         <a class="nav-link" href="#">Politics</a> -->
-  <!--       </li> -->
-  <!--       <li class="nav-item"> -->
-  <!--         <a class="nav-link" href="#">Business</a> -->
-  <!--       </li> -->
-  <!--       <li class="nav-item"> -->
-  <!--         <a class="nav-link" href="#">Technology</a> -->
-  <!--       </li> -->
-  <!--       <li class="nav-item"> -->
-  <!--         <a class="nav-link" href="#">Sports</a> -->
-  <!--       </li> -->
-  <!--     </ul> -->
-  <!--   </div> -->
-  <!-- </nav> -->
   <div class="container-fluid">
     <header class="container-fluid">
       <nav class="navbar navbar-expand-lg container-fluid d-flex navbar-light">
         <a class="navbar-brand" href="#">News</a>
         <div class="collapse navbar-collapse" id="navbarNav">
           <div class="navbar-nav">
-            <div class="nav-item dropdown">
+            <div class="nav-item dropdown option-menu" data-bs-theme="dark">
               <button class="nav-link dropdown-toggle" id="categoryDropdown" data-bs-toggle="dropdown" role="button"
                 aria-haspopup="true" aria-expanded="false">
                 Geral
               </button>
-              <div class="dropdown-menu container-fluid category-menu">
-                <button class="category-item template btn" data-option=""></button>
+              <div class="dropdown-menu category-menu">
+                <div class="dropdown-body">
+                  <button class="category-item template btn" data-option=""></button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="nav-item dropdown">
-            <button class="nav-link dropdown-toggle" id="countryDropdown" data-bs-toggle="dropdown" role="button"
-              aria-haspopup="true" aria-expanded="false">
-              Brasil
-            </button>
-            <div class="dropdown-menu container-fluid country-menu">
-              <button class="country-item template btn" data-option=""></button>
+            <div class="nav-item dropdown option-menu">
+              <button class="nav-link dropdown-toggle" id="countryDropdown" data-bs-toggle="dropdown" role="button"
+                aria-haspopup="true" aria-expanded="false">
+                Brasil
+              </button>
+              <div class="dropdown-menu country-menu">
+                <div class="dropdown-body">
+                  <button class="country-item template btn" data-option=""></button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -85,6 +59,27 @@
     <!-- Main Content -->
     <main class="container">
       <hr>
+      <nav>
+        <ul class="news-pager pagination justify-content-center">
+          <li class="page-item"><button class="btn btn-dark btn-pages invisible" data-steps=-1><svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+              </svg></button></li>
+          <li class="page-item active"><span class="page-link steps-count">
+              1
+            </span></li>
+          <li class="page-item"><button class="btn btn-dark btn-pages invisible" data-steps=1><svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+              </svg>
+            </button></li>
+          </li>
+        </ul>
+      </nav>
       <div class="news-container">
         <h4 class="result-text text-center fs-6 fw-bold font-monospace">Resultados:</h4>
         <br>
@@ -99,10 +94,32 @@
               lacinia
               vestibulum, mauris lorem bibendum turpis, vel bibendum eros lorem vel nunc.</p>
             <button class="news-category card-text" data-option=""><small class="text-muted"></small></button>
+            <button class="news-country card-text" data-option=""><small class="text-muted"></small></button>
             <button class="btn show-more text-muted" aria-expanded="false">Ver mais</a>
           </div>
         </div>
       </div>
+      <nav>
+        <ul class="news-pager pagination justify-content-center">
+          <li class="page-item"><button class="btn btn-dark btn-pages invisible" data-steps=-1><svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+              </svg></button></li>
+          <li class="page-item active"><span class="page-link steps-count">
+              1
+            </span></li>
+          <li class="page-item"><button class="btn btn-dark btn-pages invisible" data-steps=1><svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+              </svg>
+            </button></li>
+          </li>
+        </ul>
+      </nav>
     </main>
   </div>
 
@@ -113,7 +130,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
     integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
     crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 
 </html>

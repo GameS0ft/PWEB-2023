@@ -1,4 +1,4 @@
-const apiKey = 'pub_23554e6e585a7bf49510dfab6b30ce5fc28d6';
+const apiKey = 'pub_25259e1ef0ba0b3071820c89f10262c50f47b';
 const country = 'br';
 const category = '';
 const newsdata_url = `https://newsdata.io/api/1/news?apikey=${apiKey}`;
@@ -14,17 +14,15 @@ const status_data = {
       country: "br",
       category: "",
       q: "",
-      language: ""
+      language: "",
+      page: ""
     }
   },
-  results: {
-    query: {},
-    news: {}
-  }
+  results: {}
 }
 
 sources = {
-  categories: {
+  category: {
     "": "Geral",
     "top": "Top",
     "world": "Mundo",
@@ -34,12 +32,28 @@ sources = {
     "entertainment": "Entretenimento",
     "sports": "Esportes"
   },
-  countries: {
-    "br": "Brasil",
+  country: {
+    "br,brazil": "Brasil",
     "": "Global",
-    "us": "EUA",
-    "gb": "UK",
-    "cn": "China"
+    "de,germany": "Alemanha",
+    "ar,argentina": "Argentina",
+    "au,australia": "Austrália",
+    "bo,bolivia": "Bolívia",
+    "cn": "China",
+    "kr,souty korea": "Coréia do Sul",
+    "dk,denmark": "Dinamarca",
+    "us,united states of america": "EUA",
+    "eg,egypt": "Egito",
+    "es": "Espanha",
+    "fr,france": "França",
+    "il,israel": "Israel",
+    "it,italy": "Itália",
+    "jp,japan": "Japão",
+    "pe,peru": "Peru",
+    "tr,turkey": "Turquia",
+    "pt,portugal": "Portugal",
+    "za,south africa": "África do Sul",
+    "in,india": "Índia",
   }
 
 }
@@ -52,13 +66,13 @@ function applyQuery(url) {
   return url + `&${queryString}`;
 }
 
-async function requestAPI(url, page) {
-  response = await fetch(url + `&page=${page}`)
+async function requestAPI(url) {
+  response = await fetch(url);
   const data = await response.json();
   return data;
 }
 
-function tmp_getFetchedNews(url, page) {
+function tmp_getFetchedNews(url) {
   return {
     "status": "success", "totalResults": 1089, "results": [
       { "title": "Quem ganhou a corrida de Fórmula 1 hoje: Verstappen vence GP de Mônaco 2023", "link": "https://www.dci.com.br/esporte/quem-ganhou-a-corrida-de-formula-1-hoje-verstappen-vence-gp-de-monaco-2023/296289/", "keywords": ["Esporte", "F1"], "creator": ["Beatriz Fabbri"], "video_url": null, "description": "Este conteúdo foi publicado primeiro em https://www.dci.com.br/ Pela sexta prova de 2023 na Fórmula 1, confira quem ganhou o Grande Prêmio de Mônaco Este conteúdo foi publicado primeiro em https://www.dci.com.br/", "content": "Max Verstappen, da Red Bull, é quem ganhou a corrida de Fórmula 1 hoje, o Grande Prêmio de Mônaco, em 28 de maio de 2023. Correndo no circuito de rua de Monte Carlo, o piloto largou da primeira posição e de lá não saiu mais. Confira como foi o GP de Mônaco neste domingo. Fecham a parte da frente da classificação os pilotos Fernando Alonso, da Aston Martin, e Esteban Ocon, da Alpine. Verstappen é quem ganhou a corrida de Mônaco na Fórmula 1 O belíssimo Circuito de Mônaco, em Monte Carlo, recebeu a sexta prova da temporada neste domingo, e quem ganhou a corrida foi Max Verstappen. O holandês largou em primeiro lugar no grid de largada e facilmente abriu vantagem contra os oponentes, e terminou a prova com 1:25:201. O segundo lugar ficou com Fernando Alonso, e Esteban Ocon em terceiro completam o pódio no resultado da Fórmula 1 hoje no GP de Mônaco. O dia de corrida começou nublado com arquibancadas lotadas, as sacadas dos luxuosos hotéis cheias e a bela vista de Monte Carlo. Na largada, Verstappen assumiu a primeira posição, seguido por Fernando Alonso e Esteban Ocon. A classificação na parte da frente foi assim até o fim da corrida. A chuva tomou conta do GP de Mônaco a partir da volta 60. A atenção dos pilotos teve de ser redobrada na pista para evitar acidentes, batidas e toques entre os carros. Enquanto a parte da frente não teve alteração entre Verstappen, Alonso e Ocon, os pilotos de trás trataram de brigar por melhores posições. Mesmo com a chuva, o total de 78 voltas foram completas. Esta é a quarta vitória de Verstappen na temporada. RESULTADO DA FÓRMULA 1 NO GP DE MÔNACO 2023 1 Max Verstappen (Red Bull) – 1:25:201 2 Fernando Alonso (Aston Martin) – 1:25:668 3 Esteban Ocon (Alpine) – 1:24:231 4 Lewis Hamilton (Mercedes) 5 George Russell (Mercedes) 6 Charles Leclerc (Ferrari) 7 Pierre Gasly (Alpine) 8 Carlos Sainz (Ferrari) 9 Lando Norris (McLaren) 10 Oscar Piastri (McLaren) 11 Valtteri Bottas (AlfaRomeo) 12 Nyck De Vries (AlphaTauri) 13 Zhou Guanyu (Alfa Romeo) 14 Alexander Albon (Williams) 15 Yuki Tsunoda (AlphaTauri) 16 Sergio Perez (Red Bull) 17 Nico Hulkenberg (Haas) 18 Logan Sargeant (Williams) 19 Kevin Magnussen (Haas) 20 Lance Stroll (Aston Martin) Quando é a próxima corrida da Fórmula 1? A próxima corrida da Fórmula 1 é o Grande Prêmio da Espanha, no Circuito da Catalunha, marcado para 02 até 04 de junho de 2023. Esta é a sétima prova da temporada, já que Imola foi cancelada. O fim de semana começa na sexta-feira com dois treinos livres. No sábado acontece o treino classificatório que define o grid de largada, enquanto no domingo a corrida na Espanha fecha a competição. Para assistir o torcedor deve sintonizar a Band, na TV aberta, além do canal BandSports, na TV paga, assim como a plataforma BandPlay e o site da emissora. Também dá para ver no F1 TV Pro, mas é preciso ser assinante. Quanto ganha um piloto de Fórmula 1 em 2023? Classificação dos pilotos atualizada Max Verstappen lidera a classificação dos pilotos com quatro vitórias na temporada. O atual campeão mantém a vantagem diante de Sergio Perez, segundo colocado. A tabela está cada vez mais embaralhada entre os pilotos. 1 Max Verstappen – 144 pontos 2 Sergio Perez – 105 pontos 3 Fernando Alonso – 93 pontos 4 Lewis Hamilton – 69 pontos 5 George Russell – 50 pontos 6 Carlos Sainz – 48 pontos 7 Charles Leclerc – 42 pontos 8 Lance Stroll – 27 pontos 9 Esteban Ocon – 21 pontos 10 Pierre Gasly – 14 pontos 11 Lando Norris – 12 pontos 12 Nico Hulknberg – 6 pontos 13 Oscar Piastri – 5 pontos 14 Valtteri Bottas – 4 pontos 15 Zhou Guanyu – 2 pontos 16 Yuki Tsunoda – 2 pontos 17 Kevin Magnussen – 2 pontos 18 Alexander Albon – 1 ponto 19 Nyck De Vries – 0 pontos 20 Logan Sargeant – 0 pontos Leia também: Calendário das corridas da Fórmula 1 em 2023", "pubDate": "2023-05-28 15:03:25", "image_url": null, "source_id": "dci", "category": ["sports"], "country": ["brazil"], "language": "portuguese" },
@@ -79,6 +93,19 @@ function tmp_getFetchedNews(url, page) {
 //     })
 // }
 
+function resetSearch() {
+  status_data.results = {
+    query: {},
+    news: null,
+    pages: {
+      history: [],
+      step: 0
+    },
+  }
+  status_data.request.query.page = "";
+  document.querySelectorAll(".steps-count").forEach(count => count.textContent = status_data.results.pages.step + 1);
+}
+
 function clearNews() {
   const fetched_news = document.querySelectorAll(".fetched-news");
   fetched_news.forEach(node => {
@@ -86,8 +113,8 @@ function clearNews() {
   });
 }
 
-function changeCategory(category) {
-  if (setCategoryQuery(category)) {
+function changeOption(option, source) {
+  if (setOptionQuery(option, source)) {
     getSearchQuery();
     reloadNews();
   }
@@ -99,22 +126,23 @@ function changeCountry(country) {
   }
 }
 
-function generateOptionButton(modelBtn, option, listener, clone) {
-  const categoryBtn = clone ? modelBtn.cloneNode(true) : modelBtn;
-  categoryBtn.setAttribute("data-option", option);
+function generateOptionButton(modelBtn, clone, option, handler, ...handlerArgs) {
+  const optionBtn = clone ? modelBtn.cloneNode(true) : modelBtn;
+  optionBtn.setAttribute("data-option", option);
 
-  categoryBtn.addEventListener('click', () => listener(categoryBtn.getAttribute("data-option")));
+  optionBtn.addEventListener('click', () => handler(option, ...handlerArgs));
 
-  return categoryBtn;
+  return optionBtn;
 }
 
 function getSearchQuery() {
   const searchInput = document.querySelector("#searchInput");
   status_data.request.query.q = searchInput.value;
+  resetSearch();
   return true;
 }
 
-function displayNews(news, quantity) {
+function displayNews(news) {
   const articles = news.results;
   console.log(news.results);
   const newsContainer = document.querySelector(".news-container");
@@ -146,19 +174,27 @@ function displayNews(news, quantity) {
     else {
       imageElement.src = article.image_url;
     }
-    const categoryElement = articleElement.querySelector("button[data-option]");
 
-    if (status_data.results.query.category != "") {
-      categoryElement.style.display = "none";
-    }
-    else {
-      const cat = getActualCategory(article.category);
-      const categoryName = sources.categories[cat];
-      categoryElement.firstElementChild.innerText = categoryName;
-      generateOptionButton(categoryElement, cat, changeCategory, false);
-    }
 
-    // const descriptionCollapse = new bootstrap.Collapse(descriptionElement)._config;
+    Object.keys(sources).forEach(src => {
+      const optionElement = articleElement.querySelector(`.news-${src}[data-option]`);
+      if (optionElement == undefined) {
+        console.log(`could not find ${src} option element...`);
+        return;
+      }
+      if (status_data.results.query[src] != "") {
+        optionElement.style.display = "none";
+      }
+      else {
+        console.log(article[src])
+        const opt = getActualOption(article[src], sources[src]);
+        const optionName = sources[src][opt];
+        optionElement.firstElementChild.innerText = optionName;
+        generateOptionButton(optionElement, false, opt.split(','), changeOption, src);
+      }
+
+    })
+
     const showMoreElement = articleElement.querySelector(".show-more");
     showMoreElement.addEventListener('click', () => {
       if (descriptionElement.classList.contains("expanded")) {
@@ -175,6 +211,7 @@ function displayNews(news, quantity) {
     newsContainer.appendChild(articleElement);
 
 
+
     if (descriptionElement.clientHeight < descriptionElement.scrollHeight) {
       showMoreElement.style.display = "inline";
     }
@@ -185,76 +222,111 @@ function displayNews(news, quantity) {
 function reloadNews() {
   clearNews();
   status_data.request.fetch_url = applyQuery(newsdata_url);
-  fetchAndDisplayNews('', 10);
+  fetchAndDisplayNews();
+
 }
 
 
-async function fetchAndDisplayNews(page, quantity) {
-  if (page == null) {
+async function fetchAndDisplayNews() {
+  let news = status_data.results.news;
+  if (news == null && status_data.request.query.page != null) {
+    console.log("fetching news...");
+    news = await requestAPI(status_data.request.fetch_url);
+    status_data.results.news = news;
+    status_data.request.query.page = news.nextPage;
+    status_data.results.query = Object.assign({}, status_data.request.query);
+  }
+
+  displayNews(news);
+}
+
+
+Object.keys(sources).forEach(src => {
+  const optionMenuModel = document.querySelector(`.option-menu .${src}-menu button[data-option]`);
+  Object.keys(sources[src]).forEach(option => {
+    const button = generateOptionButton(optionMenuModel, true, option.split(','), changeOption, src);
+    button.classList.remove("template");
+    button.innerText = sources[src][option];
+    optionMenuModel.parentNode.appendChild(button);
+  })
+})
+
+
+function getActualOption(option, source) {
+  let actopt = '';
+  option.forEach(opt => {
+    Object.keys(source).forEach(src => {
+      const names = src.split(',');
+      if (names.indexOf(opt) > -1) {
+        actopt = src;
+        return;
+      }
+    })
+  })
+  return actopt;
+}
+
+function setOptionQuery(option, type) {
+  option = getActualOption(option, sources[type], false);
+  const realOption = option.split(",")[0];
+  if (status_data.request.query[type] != realOption) {
+    status_data.request.query[type] = realOption;
+    const dropdown = document.querySelector(`#${type}Dropdown`);
+    dropdown.textContent = sources[type][option];
+    return true;
+  }
+  return false;
+}
+
+
+function queryPage(steps) {
+  if (steps == 0) {
     return;
   }
-  const news = await requestAPI(status_data.request.fetch_url, page);
-  status_data.results.news = news;
-  status_data.results.query = Object.assign({}, status_data.request.query);
-
-  displayNews(news, quantity);
-}
-
-
-{
-  const categoryMenuModel = document.querySelector(".category-menu button[data-option]");
-  Object.keys(sources.categories).forEach(category => {
-    const button = generateOptionButton(categoryMenuModel, category, changeCategory, true);
-    button.classList.remove("template");
-    button.innerText = sources.categories[category];
-    categoryMenuModel.parentNode.appendChild(button);
-  });
-}
-{
-  const countryMenuModel = document.querySelector(".country-menu button[data-option]");
-  Object.keys(sources.countries).forEach(country => {
-    const button = generateOptionButton(countryMenuModel, country, changeCountry, true);
-    button.classList.remove("template");
-    button.innerText = sources.countries[country];
-    countryMenuModel.parentNode.appendChild(button);
-  });
-}
-
-function getActualCategory(category) {
-  let firstCat = '';
-  category.toString().split(',').forEach(cat => {
-    if (cat in sources.categories) {
-      firstCat = cat;
+  const pages = status_data.results.pages;
+  const news = status_data.results.news;
+  if (pages.history.length <= 0 || (news != null && news != pages.history[pages.step])) {
+    // if (pages.step + 1 != pages.history.length) {
+    //   console.log(`Assertion Error: ${pages.step}, ${pages.history.length}`);
+    // }
+    pages.history.push(news)
+  }
+  debugger;
+  if (steps > 0) {
+    pages.step += steps;
+    if (pages.history.length <= pages.step) {
+      status_data.results.news = null;
+      pages.step = pages.history.length;
       return;
     }
-  })
-  return firstCat;
-}
-
-
-function setCategoryQuery(category) {
-  category = category in sources.categories ? category : '';
-  if (status_data.request.query.category != category) {
-    status_data.request.query.category = category;
-    const dropdown = document.querySelector("#categoryDropdown");
-    dropdown.textContent = sources.categories[category];
-    return true;
   }
-  return false;
-}
-
-function setCountryQuery(country) {
-  country = country in sources.countries ? country : '';
-  if (status_data.request.query.country != country) {
-    status_data.request.query.country = country;
-    const dropdown = document.querySelector("#countryDropdown");
-    dropdown.textContent = sources.countries[country];
-    return true;
+  else {
+    pages.step += steps;
+    if (pages.step < 0) {
+      pages.step = 0;
+    }
   }
-  return false;
+
+  status_data.results.news = pages.history[pages.step];
 }
 
 
+{
+  document.querySelectorAll(".news-pager").forEach(pager => {
+    pager.querySelectorAll(".btn-pages").forEach(btn => {
+      btn.classList.remove("invisible");
+      btn.addEventListener("click", () => {
+        const steps = btn.getAttribute("data-steps");
+        queryPage(Number(steps));
+
+        document.querySelectorAll(".steps-count").forEach(count => count.textContent = status_data.results.pages.step + 1);
+        reloadNews();
+      })
+    })
+  });
+}
+
+resetSearch();
 reloadNews();
 
 
