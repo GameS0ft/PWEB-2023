@@ -1,4 +1,4 @@
-const apiKey = 'pub_23554e6e585a7bf49510dfab6b30ce5fc28d6';
+const apiKey = 'pub_2530260114514d9c026db61911074f2022a1c';
 const newsdata_url = `https://newsdata.io/api/1/news?apikey=${apiKey}`;
 
 const status_data = {
