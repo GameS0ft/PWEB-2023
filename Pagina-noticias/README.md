@@ -24,7 +24,7 @@ Aqui estão alguns dos recursos da minha página de notícias:
 ## Escolher notícias e mudar tema
 
 1. Clique na barra com três listas para escolher "Geral" que categorias de notícias ou "Brasil" na qual se pode selecionar notícias de outros países
-2. Clique no botão "Modo Escuro" para mudar o tema da página web
+2. Clique no botão ao lado esquerdo da barra de pesquisa para mudar o tema da página web
 
 ## Contribuindo
 

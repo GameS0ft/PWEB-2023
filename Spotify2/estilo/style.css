@@ -206,6 +206,7 @@ main
  #pause-btn
  {
   display: none;
+  margin: 3%;
  }
 
  .player
@@ -314,6 +315,19 @@ main
   border-radius: 8px;
   background-color: white;
  }
+
+#audio-player
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  /* z-index: -1;
+  opacity: 0; */
+  
+}
+
+
  @media screen and (max-width: 1700px) 
  {
   .main-col
