@@ -3,9 +3,8 @@ var loaded = false;
 
 var playBtn = document.getElementById('play-btn');
 var pauseBtn = document.getElementById('pause-btn');
-
-var teste = document.getElementById('teste');
 var progresso = document.getElementById('progress');
+var progressoIntervalo = null;
 
 
 function barraProgresso()
@@ -27,6 +26,7 @@ pauseBtn.addEventListener('click',(e)=>
     pauseBtn.style.display = "none";
     audioPlayer.pause();
     barraProgresso();
+    clearInterval(progressoIntervalo);
 
     return false;
 });
@@ -37,8 +37,8 @@ playBtn.addEventListener('click',(e)=>
     playBtn.style.display = "none";
     pauseBtn.style.display = "inline";
     audioPlayer.play();
-    barraProgresso();
-
+    progressoIntervalo = setInterval(barraProgresso,500);
+    return false;
 });
 
 const playSong = (file) => {
@@ -69,6 +69,7 @@ document.querySelectorAll('.main-col').forEach(item=>
             <img src= "`+image+`" />
             <h3>`+artist+`<br/><span>`+song+`</span></h3`;
 
+            progressoIntervalo = setInterval(barraProgresso, 500);
             playSong(File);
 
     });
